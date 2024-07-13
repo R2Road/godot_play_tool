@@ -12,8 +12,8 @@ enum eSceneType
 
 
 ############################ Variable ############################
-var gdpt_action_manager : GDPTActionManager = GDPTActionManager.new( self )
-var pam  = gdpt_action_manager # alias
+var play_action_manager : GDPTActionManager = GDPTActionManager.new( self )
+var pam  = play_action_manager # alias
 
 
 
@@ -34,14 +34,14 @@ func _init():
 
 
 func _input( event ):
-	gdpt_action_manager.do( event )
+	play_action_manager.do( event )
 
 
 
 ############################   User   ############################
 func build_summary( _scene_type : eSceneType ):
 	var summary_node = $PGCanvas/Summary
-	summary_node.text = gdpt_action_manager.build_summary()
+	summary_node.text = play_action_manager.build_summary()
 	
 	if eSceneType.ROOT == _scene_type:
 		summary_node.set_position( 
