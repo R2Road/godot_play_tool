@@ -20,7 +20,7 @@ var pam  = play_action_manager # alias
 ############################ Override ############################
 func _init():
 	var canvas_layer = CanvasLayer.new()
-	canvas_layer.name = "PGCanvas"
+	canvas_layer.name = "PlayCanvas"
 	add_child( canvas_layer )
 	
 	var label = Label.new()
