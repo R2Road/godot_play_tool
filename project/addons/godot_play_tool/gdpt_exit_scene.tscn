@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" path="res://addons/godot_play_tool/gdpt_exit_scene.gd" id="1_i3vfj"]
 
-[node name="playground_exit" type="Node2D"]
+[node name="playground_exit" type="Node"]
 script = ExtResource("1_i3vfj")
