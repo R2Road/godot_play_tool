@@ -4,7 +4,7 @@ extends GDPTScene
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( "Test Main <" + GDPT.version + ">" )
+	pam.set_name( "Dev Root <" + GDPT.version + ">" )
 	pam.add_split()
 	pam.add_exit()
 	pam.add_lf()
