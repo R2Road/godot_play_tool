@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="6_wm2l6"]
 [ext_resource type="PackedScene" uid="uid://8pengjsakrxj" path="res://addons/godot_play_tool/helper/helper_center_pivot.tscn" id="7_442a6"]
 
-
 [node name="helper_root" type="Node2D"]
 script = ExtResource("1_u78kq")
 
@@ -55,6 +54,15 @@ radius = 20.0
 metadata/_edit_group_ = true
 
 [node name="helper_point" parent="helper_circle_2" instance=ExtResource("2_5typv")]
+
+[node name="helper_circle_3" parent="." instance=ExtResource("4_ixfyo")]
+position = Vector2(267, 528)
+color = Color(0.00380502, 0.592167, 0.724739, 1)
+radius = 20.0
+fill = true
+metadata/_edit_group_ = true
+
+[node name="helper_point" parent="helper_circle_3" instance=ExtResource("2_5typv")]
 
 [node name="helper_line" parent="." instance=ExtResource("5_spmwa")]
 position = Vector2(445, 399)
