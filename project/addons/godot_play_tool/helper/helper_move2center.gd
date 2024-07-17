@@ -16,7 +16,7 @@ func _ready():
 	
 	# 목표 world position 확보
 	if get_viewport().get_camera_2d():
-		target_world_position = get_viewport().get_camera_2d().position
+		target_world_position = get_viewport().get_camera_2d().get_screen_center_position()
 	else:
 		target_world_position = get_viewport().size * 0.5
 	

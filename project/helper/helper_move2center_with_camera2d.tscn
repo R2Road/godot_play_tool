@@ -19,7 +19,7 @@ radius = 20.0
 fill = true
 
 [node name="Player" parent="." instance=ExtResource("5_2d08e")]
-position = Vector2(102, 89)
+position = Vector2(277, 91)
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
