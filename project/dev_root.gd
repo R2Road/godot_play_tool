@@ -12,6 +12,6 @@ func _ready():
 	pam.add_lf()
 	pam.add_mover( "Test Action 1",	Key.KEY_Q, 		"res://test_action_1.tscn" )
 	pam.add_split()
-	pam.add_mover( "Helper",		Key.KEY_SPACE, 	"res://helper_root.tscn" )
+	pam.add_mover( "Helper",		Key.KEY_SPACE, 	"res://helper/helper_root.tscn" )
 	pam.add_split()
 	build_summary( eSceneType.ROOT )
