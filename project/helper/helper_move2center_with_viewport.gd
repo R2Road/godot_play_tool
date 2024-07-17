@@ -4,7 +4,7 @@ extends GDPTScene
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( "Helper Center Pivot : with Camera2D" )
+	pam.set_name( "Center Pivot : with Viewport" )
 	pam.add_split()
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_lf()
