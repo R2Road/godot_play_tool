@@ -93,4 +93,6 @@ offset_right = 40.0
 offset_bottom = 23.0
 text = "Move2Center Test Root"
 
-[node name="helper_center_pivot" parent="." instance=ExtResource("7_442a6")]
+[node name="helper_reticle" parent="." instance=ExtResource("7_442a6")]
+
+[node name="helper_move2center" parent="helper_reticle" instance=ExtResource("6_wm2l6")]
