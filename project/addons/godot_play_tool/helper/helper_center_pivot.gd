@@ -17,7 +17,10 @@ func _init():
 
 
 func _ready():
-	position = get_parent().to_local( get_viewport().size * 0.5 )
+	if get_viewport().get_camera_2d():
+		position = get_parent().to_local( get_viewport().get_camera_2d().position )
+	else:
+		position = get_parent().to_local( get_viewport().size * 0.5 )
 
 
 func _draw():
