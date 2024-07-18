@@ -1,10 +1,16 @@
-extends GDPTScene
+class_name test_action_1 extends GDPTScene
+
+
+
+######################### GDPT Override ##########################
+static func scene_name()->String:
+	return "Test Action 1"
 
 
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( "Label" )
+	pam.set_name( scene_name() )
 	pam.add_split()
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_lf()

@@ -1,13 +1,19 @@
-extends GDPTScene
+class_name helper_root extends GDPTScene
+
+
+
+######################### GDPT Override ##########################
+static func scene_name()->String:
+	return "Helper Root"
 
 
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( "Helper Root" )
+	pam.set_name( scene_name() )
 	pam.add_split()
-	pam.add_mover( "Dev Root",		Key.KEY_ESCAPE, "res://dev_root.tscn" )
+	pam.add_mover( dev_root.scene_name(),			Key.KEY_ESCAPE, "res://dev_root.tscn" )
 	pam.add_lf()
-	pam.add_mover( "Move2Center : with Viewport",	Key.KEY_1, "res://helper/helper_move2center_with_viewport.tscn" )
-	pam.add_mover( "Move2Center : with Camera2D",	Key.KEY_2, "res://helper/helper_move2center_with_camera2d.tscn" )
+	pam.add_mover( helper_move2center_with_viewport.scene_name(),	Key.KEY_1, "res://helper/helper_move2center_with_viewport.tscn" )
+	pam.add_mover( helper_move2center_with_camera2d.scene_name(),	Key.KEY_2, "res://helper/helper_move2center_with_camera2d.tscn" )
 	build_summary( eSceneType.TEST )
