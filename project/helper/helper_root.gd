@@ -10,7 +10,7 @@ static func scene_name()->String:
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( scene_name() )
+	pam.set_name( helper_root.scene_name() )
 	pam.add_split()
 	pam.add_mover( dev_root.scene_name(),			Key.KEY_ESCAPE, "res://dev_root.tscn" )
 	pam.add_lf()
