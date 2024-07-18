@@ -12,7 +12,7 @@ extends Node2D
 
 ############################ Variable ############################
 var drag_on = false
-var last_mouse_position : Vector2
+var drag_offset : Vector2
 
 
 
@@ -33,8 +33,10 @@ func _draw():
 
 func _process( _delta ):
 	if drag_on:
-		get_parent().position += ( get_global_mouse_position() - last_mouse_position )
-		last_mouse_position = get_global_mouse_position()
+		get_parent().position = (
+			( get_parent().get_parent().to_local( get_global_mouse_position() )
+			- drag_offset )
+		)
 
 
 func _unhandled_input(event):
@@ -52,9 +54,11 @@ func _unhandled_input(event):
 			queue_redraw()
 	else:
 		if event.is_pressed():
-			if rect.has_point( to_local( event.position ) ):
+			var mouse_local_position = to_local( get_global_mouse_position() )
+			print( mouse_local_position )
+			if rect.has_point( mouse_local_position ):
 				drag_on = true
-				last_mouse_position = event.position
+				drag_offset = mouse_local_position
 				# _draw is only called once
 				# need redraw : use CanvasItem.queue_redraw()
 				queue_redraw()
