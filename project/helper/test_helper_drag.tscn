@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://ch2b4wh2pqywe"]
+
+[ext_resource type="Script" path="res://helper/test_helper_drag.gd" id="1_fyyqt"]
+[ext_resource type="PackedScene" uid="uid://8pengjsakrxj" path="res://addons/godot_play_tool/helper/helper_reticle.tscn" id="2_1rygg"]
+[ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="3_xytvo"]
+[ext_resource type="PackedScene" uid="uid://gpu5f7fm35o4" path="res://addons/godot_play_tool/helper/helper_circle.tscn" id="4_veepy"]
+
+[node name="test_helper_drag" type="Node2D"]
+script = ExtResource("1_fyyqt")
+
+[node name="helper_reticle" parent="." instance=ExtResource("2_1rygg")]
+
+[node name="helper_move2center" parent="helper_reticle" instance=ExtResource("3_xytvo")]
+
+[node name="zero_zero" parent="." instance=ExtResource("4_veepy")]
+color = Color(1, 0, 0, 1)
+radius = 20.0
+fill = true

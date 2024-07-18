@@ -16,4 +16,6 @@ func _ready():
 	pam.add_lf()
 	pam.add_mover( helper_move2center_with_viewport.scene_name(),	Key.KEY_1, "res://helper/helper_move2center_with_viewport.tscn" )
 	pam.add_mover( helper_move2center_with_camera2d.scene_name(),	Key.KEY_2, "res://helper/helper_move2center_with_camera2d.tscn" )
+	pam.add_lf()
+	pam.add_mover( test_helper_drag.scene_name(),	Key.KEY_Q, "res://helper/test_helper_drag.tscn" )
 	build_summary( eSceneType.TEST )
