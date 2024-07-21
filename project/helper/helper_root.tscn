@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://k5vx7qt2cevj"]
+[gd_scene load_steps=9 format=3 uid="uid://k5vx7qt2cevj"]
 
 [ext_resource type="Script" path="res://helper/helper_root.gd" id="1_u78kq"]
 [ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://addons/godot_play_tool/helper/helper_point.tscn" id="2_5typv"]
@@ -7,12 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://cmqwendenqxuy" path="res://addons/godot_play_tool/helper/helper_line.tscn" id="5_spmwa"]
 [ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="6_wm2l6"]
 [ext_resource type="PackedScene" uid="uid://8pengjsakrxj" path="res://addons/godot_play_tool/helper/helper_reticle.tscn" id="7_442a6"]
+[ext_resource type="PackedScene" uid="uid://dsuaumbxcknhr" path="res://addons/godot_play_tool/helper/helper_0_0.tscn" id="8_5xyjv"]
 
 [node name="helper_root" type="Node2D"]
 script = ExtResource("1_u78kq")
 
-[node name="helper_point_left_top" parent="." instance=ExtResource("2_5typv")]
-z_index = 4096
+[node name="helper_0_0" parent="." instance=ExtResource("8_5xyjv")]
 
 [node name="helper_point" parent="." instance=ExtResource("2_5typv")]
 z_index = 4096
