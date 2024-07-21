@@ -13,6 +13,7 @@ position = Vector2(176, 84)
 metadata/_edit_group_ = true
 
 [node name="helper_drag" parent="Drag1" instance=ExtResource("4_e8ph7")]
+z_index = 4096
 rect = Rect2(-50, -50, 100, 100)
 
 [node name="Drag2" type="Node2D" parent="."]
@@ -20,9 +21,11 @@ position = Vector2(-153, -103)
 metadata/_edit_group_ = true
 
 [node name="helper_drag" parent="Drag2" instance=ExtResource("4_e8ph7")]
+z_index = 4096
 rect = Rect2(-50, -50, 100, 100)
 
 [node name="helper_reticle" parent="." instance=ExtResource("2_1rygg")]
+z_index = 4096
 
 [node name="Camera2D" type="Camera2D" parent="helper_reticle"]
 

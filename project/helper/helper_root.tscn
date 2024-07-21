@@ -12,31 +12,39 @@
 script = ExtResource("1_u78kq")
 
 [node name="helper_point_left_top" parent="." instance=ExtResource("2_5typv")]
+z_index = 4096
 
 [node name="helper_point" parent="." instance=ExtResource("2_5typv")]
+z_index = 4096
 position = Vector2(273, 249)
 
 [node name="helper_rect_1" parent="." instance=ExtResource("3_s4q3e")]
+z_index = 4096
 position = Vector2(72, 392)
 color = Color(1, 0, 0, 1)
 
 [node name="helper_point" parent="helper_rect_1" instance=ExtResource("2_5typv")]
+z_index = 4096
 
 [node name="helper_rect_2" parent="." instance=ExtResource("3_s4q3e")]
+z_index = 4096
 position = Vector2(73, 460)
 color = Color(1, 0, 0, 1)
 out_line_bold = 3.0
 metadata/_edit_group_ = true
 
 [node name="helper_point" parent="helper_rect_2" instance=ExtResource("2_5typv")]
+z_index = 4096
 
 [node name="helper_rect_3" parent="." instance=ExtResource("3_s4q3e")]
+z_index = 4096
 position = Vector2(73, 528)
 color = Color(1, 0, 0, 1)
 fill = true
 metadata/_edit_group_ = true
 
 [node name="helper_point" parent="helper_rect_3" instance=ExtResource("2_5typv")]
+z_index = 4096
 
 [node name="helper_circle_1" parent="." instance=ExtResource("4_ixfyo")]
 position = Vector2(268, 393)
@@ -45,6 +53,7 @@ radius = 15.0
 metadata/_edit_group_ = true
 
 [node name="helper_point" parent="helper_circle_1" instance=ExtResource("2_5typv")]
+z_index = 4096
 
 [node name="helper_circle_2" parent="." instance=ExtResource("4_ixfyo")]
 position = Vector2(267, 467)
@@ -54,6 +63,7 @@ radius = 20.0
 metadata/_edit_group_ = true
 
 [node name="helper_point" parent="helper_circle_2" instance=ExtResource("2_5typv")]
+z_index = 4096
 
 [node name="helper_circle_3" parent="." instance=ExtResource("4_ixfyo")]
 position = Vector2(267, 528)
@@ -63,6 +73,7 @@ fill = true
 metadata/_edit_group_ = true
 
 [node name="helper_point" parent="helper_circle_3" instance=ExtResource("2_5typv")]
+z_index = 4096
 
 [node name="helper_line" parent="." instance=ExtResource("5_spmwa")]
 position = Vector2(445, 399)
@@ -70,18 +81,22 @@ color = Color(1, 0.335514, 0.269596, 1)
 point_end = Vector2(0, 100)
 
 [node name="helper_point" parent="helper_line" instance=ExtResource("2_5typv")]
+z_index = 4096
 
 [node name="helper_move2center_test" parent="." instance=ExtResource("2_5typv")]
+z_index = 4096
 position = Vector2(916, 98)
 metadata/_edit_group_ = true
 
 [node name="helper_rect" parent="helper_move2center_test" instance=ExtResource("3_s4q3e")]
+z_index = 4096
 position = Vector2(61, 61)
 rect = Rect2(-15, -15, 30, 30)
 
 [node name="helper_move2center" parent="helper_move2center_test/helper_rect" instance=ExtResource("6_wm2l6")]
 
 [node name="helper_point" parent="helper_move2center_test/helper_rect" instance=ExtResource("2_5typv")]
+z_index = 4096
 
 [node name="Label" type="Label" parent="helper_move2center_test/helper_rect"]
 offset_right = 40.0
@@ -94,5 +109,6 @@ offset_bottom = 23.0
 text = "Move2Center Test Root"
 
 [node name="helper_reticle" parent="." instance=ExtResource("7_442a6")]
+z_index = 4096
 
 [node name="helper_move2center" parent="helper_reticle" instance=ExtResource("6_wm2l6")]

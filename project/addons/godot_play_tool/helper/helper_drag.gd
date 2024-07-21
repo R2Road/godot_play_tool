@@ -1,3 +1,4 @@
+@tool
 extends Node2D
 
 
@@ -32,6 +33,9 @@ func _draw():
 
 
 func _process( _delta ):
+	if not Engine.is_editor_hint():
+		return
+		
 	if drag_on:
 		get_parent().position = (
 			( get_parent().get_parent().to_local( get_global_mouse_position() )
@@ -40,6 +44,9 @@ func _process( _delta ):
 
 
 func _unhandled_input(event):
+	if not Engine.is_editor_hint():
+		return
+		
 	if not event is InputEventMouseButton:
 		return
 	
