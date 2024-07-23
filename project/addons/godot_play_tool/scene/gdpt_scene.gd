@@ -26,14 +26,14 @@ static func scene_name()->String:
 func _init():
 	add_child( GDPT.build_scene_helper() )
 	
-	pam = $PlayCanvas.play_action_manager
+	pam = $GDPTSceneHelper.play_action_manager
 	pam.owner = self
 
 
 
 ############################   User   ############################
 func build_summary( _scene_type : eSceneType ):
-	var summary_node = $PlayCanvas/Summary
+	var summary_node = $GDPTSceneHelper/Summary
 	summary_node.text = pam.build_summary()
 	
 	if eSceneType.ROOT == _scene_type:

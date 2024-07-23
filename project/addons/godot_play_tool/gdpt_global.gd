@@ -38,7 +38,7 @@ func _exit_tree():
 ############################   User   ############################
 func build_scene_helper()->Node:
 	var canvas_layer = CanvasLayer.new()
-	canvas_layer.name = "PlayCanvas"
+	canvas_layer.name = "GDPTSceneHelper"
 	canvas_layer.set_script( GDPT.scene_helper )
 	return canvas_layer
 
