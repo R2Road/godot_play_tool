@@ -24,12 +24,9 @@ static func scene_name()->String:
 
 ############################ Override ############################
 func _init():
-	var canvas_layer = CanvasLayer.new()
-	canvas_layer.name = "PlayCanvas"
-	canvas_layer.set_script( GDPT.scene_helper )
-	add_child( canvas_layer )
+	add_child( GDPT.build_scene_helper() )
 	
-	pam = canvas_layer.play_action_manager
+	pam = $PlayCanvas.play_action_manager
 	pam.owner = self
 
 
