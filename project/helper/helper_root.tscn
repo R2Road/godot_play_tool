@@ -110,5 +110,6 @@ text = "Move2Center Test Root"
 
 [node name="helper_reticle" parent="." instance=ExtResource("7_442a6")]
 z_index = 4096
+metadata/_edit_group_ = true
 
 [node name="helper_move2center" parent="helper_reticle" instance=ExtResource("6_wm2l6")]
