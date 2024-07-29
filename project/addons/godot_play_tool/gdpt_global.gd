@@ -47,6 +47,9 @@ func _assert( flag = false ):
 	if on_assert:
 		assert( flag )
 
+func _assert_f( flag = false ):
+	assert( flag )
+
 
 func _debug_print( f : Callable ):
 	if on_debug:
