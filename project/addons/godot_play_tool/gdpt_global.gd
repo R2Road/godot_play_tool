@@ -43,7 +43,7 @@ func build_scene_helper()->Node:
 	return canvas_layer
 
 
-func _assert( flag ):
+func _assert( flag = false ):
 	if on_assert:
 		assert( flag )
 
