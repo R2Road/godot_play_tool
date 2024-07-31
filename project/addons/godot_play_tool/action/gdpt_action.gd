@@ -59,8 +59,9 @@ static func new_mover( _owner : Node, _name : String, _key : Key, _next_scene_pa
 		#
 		var tree = _owner.get_tree()
 		for c in tree.root.get_children():
-			if "GDPT" != c.name:
+			if tree.current_scene == c:
 				c.queue_free()
+				break
 		
 		#
 		# SceneTree 의 change scene 을 사용하지 않고 scene 전환 효과를 만든다.
