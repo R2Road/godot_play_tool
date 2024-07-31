@@ -20,6 +20,9 @@ var helper_reticle = preload( "res://addons/godot_play_tool/helper/helper_reticl
 
 
 ############################ Override ############################
+func _init():
+	add_to_group( "autoload" )
+
 func _enter_tree():
 	# 호출 된다.
 	print( "GDPT : Enter Tree" )
