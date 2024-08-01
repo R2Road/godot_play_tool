@@ -9,9 +9,9 @@ var play_action_manager : GDPTActionManager = GDPTActionManager.new()
 
 ############################ Override ############################
 func _init():
-	var label = Label.new()
-	label.name = "Summary"
-	add_child( label )
+	var summary = Label.new()
+	summary.name = "Summary"
+	add_child( summary )
 	
 	var fps_label = Label.new()
 	fps_label.name = "FPS"
