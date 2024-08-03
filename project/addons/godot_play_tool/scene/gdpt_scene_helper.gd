@@ -9,8 +9,10 @@ var play_action_manager : GDPTActionManager = GDPTActionManager.new()
 
 ############################ Override ############################
 func _init():
-	var summary = Label.new()
+	var summary = RichTextLabel.new()
 	summary.name = "Summary"
+	summary.fit_content = true
+	summary.autowrap_mode = TextServer.AutowrapMode.AUTOWRAP_OFF
 	add_child( summary )
 	
 	var fps_label = Label.new()
