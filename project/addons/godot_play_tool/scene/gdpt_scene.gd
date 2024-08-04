@@ -21,6 +21,10 @@ static func scene_name()->String:
 	return "GDPTScene"
 
 
+static func scene_path()->String:
+	return ""
+
+
 
 ############################ Override ############################
 func _init():

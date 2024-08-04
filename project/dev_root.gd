@@ -7,6 +7,10 @@ static func scene_name()->String:
 	return "Dev Root" + " <" + GDPT.version + ">"
 
 
+static func scene_path()->String:
+	return get_stack()[0]["source"].replace( ".gd", ".tscn" )
+
+
 
 ############################ Override ############################
 func _ready():
@@ -18,6 +22,6 @@ func _ready():
 	pam.add_lf()
 	pam.add_mover( "Test Action 1",	Key.KEY_Q, 		"res://test_action_1.tscn" )
 	pam.add_split()
-	pam.add_mover( helper_root.scene_name(),		Key.KEY_SPACE, 	"res://helper/helper_root.tscn" )
+	pam.add_mover( helper_root.scene_name(),	Key.KEY_SPACE,	helper_root.scene_path() )
 	pam.add_split()
 	build_summary( eSceneType.ROOT )

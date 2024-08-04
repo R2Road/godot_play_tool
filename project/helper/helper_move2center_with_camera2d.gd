@@ -7,6 +7,10 @@ static func scene_name()->String:
 	return "Center Pivot : with Camera2D"
 
 
+static func scene_path()->String:
+	return get_stack()[0]["source"].replace( ".gd", ".tscn" )
+
+
 
 ############################ Override ############################
 func _ready():
