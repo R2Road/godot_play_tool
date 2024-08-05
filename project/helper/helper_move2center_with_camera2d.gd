@@ -8,7 +8,7 @@ static func scene_name()->String:
 
 
 static func scene_path()->String:
-	return get_stack()[0]["source"].replace( ".gd", ".tscn" )
+	return super.scene_path()
 
 
 

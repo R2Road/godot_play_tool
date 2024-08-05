@@ -22,7 +22,7 @@ static func scene_name()->String:
 
 
 static func scene_path()->String:
-	return ""
+	return get_stack()[1]["source"].replace( ".gd", ".tscn" )
 
 
 
