@@ -40,7 +40,11 @@ func add_mover( _name : String, _key : Key, _scene_path : String ):
 
 
 func add_action( _name : String, _key : Key, _functor : Callable ):
-	container.push_back( GDPTAction.new_action( _name, _key, _functor ) )
+	container.push_back( GDPTAction.new(
+		_name
+		, _key
+		, _functor
+	) )
 
 
 func add_split():

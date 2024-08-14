@@ -91,13 +91,3 @@ static func new_mover( _owner : Node, _name : String, _key : Key, _next_scene_pa
 	)
 	
 	return ret
-
-
-static func new_action( _name : String, _key : Key, _functor : Callable )->GDPTAction:
-	var ret = GDPTAction.new(
-		_name
-		, _key
-		, _functor
-	)
-	
-	return ret
