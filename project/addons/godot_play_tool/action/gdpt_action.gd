@@ -101,21 +101,3 @@ static func new_action( _name : String, _key : Key, _functor : Callable )->GDPTA
 	)
 	
 	return ret
-
-
-static func new_message( _message : String )->GDPTAction:
-	var ret = GDPTAction.new(
-		( _message + "\n" )
-		, Key.KEY_NONE
-	)
-	
-	return ret
-
-
-static func new_split()->GDPTAction:
-	var ret = GDPTAction.new(
-		"="
-		, Key.KEY_NONE
-	)
-	
-	return ret

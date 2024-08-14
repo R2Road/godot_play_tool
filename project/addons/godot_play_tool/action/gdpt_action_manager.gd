@@ -44,11 +44,17 @@ func add_action( _name : String, _key : Key, _functor : Callable ):
 
 
 func add_split():
-	container.push_back( GDPTAction.new_split() )
+	container.push_back( GDPTAction.new(
+		"="
+		, Key.KEY_NONE
+	) )
 
 
 func add_message( _message : String ):
-	container.push_back( GDPTAction.new_message( _message ) )
+	container.push_back( GDPTAction.new(
+		( _message + "\n" )
+		, Key.KEY_NONE
+	) )
 
 
 func add_lf():
