@@ -18,25 +18,6 @@ func _init( _name : String, _key : Key, _action : Callable = ( func(): pass ) ):
 
 
 ############################   User   ############################
-static func new_exit( _owner : Node )->GDPTAction:
-	var ret = GDPTAction.new(
-		"Exit"
-		, Key.KEY_ESCAPE
-		, func ():
-			#
-			# Scene 전환이 이미 일어났는지 확인
-			# GDPTAction은 call_deferred 로 작동한다.
-			# 키를 동시에 2개 이상 누른 경우
-			# 한 프레임에 여러번의 Scene 전환 가능
-			#
-			if _owner != _owner.get_tree().current_scene:
-				return
-			
-			_owner.get_tree().change_scene_to_file( "res://addons/godot_play_tool/scene/gdpt_scene_exit.tscn" )
-	)
-	return ret
-
-
 static func new_mover( _owner : Node, _name : String, _key : Key, _next_scene_path : String )->GDPTAction:
 	var ret = GDPTAction.new(
 		_name

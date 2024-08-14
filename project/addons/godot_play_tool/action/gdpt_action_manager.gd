@@ -23,7 +23,21 @@ func set_last_scene( _last_scene_name : String, _last_scene_path : String ):
 
 
 func add_exit():
-	container.push_back( GDPTAction.new_exit( owner ) )
+	container.push_back( GDPTAction.new(
+		"Exit"
+		, Key.KEY_ESCAPE
+		, func ():
+			#
+			# Scene 전환이 이미 일어났는지 확인
+			# GDPTAction은 call_deferred 로 작동한다.
+			# 키를 동시에 2개 이상 누른 경우
+			# 한 프레임에 여러번의 Scene 전환 가능
+			#
+			if owner != owner.get_tree().current_scene:
+				return
+			
+			owner.get_tree().change_scene_to_file( "res://addons/godot_play_tool/scene/gdpt_scene_exit.tscn" )
+	) )
 
 
 func add_back( _key : Key ):
