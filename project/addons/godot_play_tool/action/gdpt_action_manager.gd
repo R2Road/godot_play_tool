@@ -52,7 +52,17 @@ func add_message( _message : String ):
 
 
 func add_lf():
-	container.push_back( GDPTAction.new_lf() )
+	container.push_back( GDPTAction.new(
+		"\n"
+		, Key.KEY_NONE
+	) )
+
+
+func add_lf2():
+	container.push_back( GDPTAction.new(
+		"\n\n"
+		, Key.KEY_NONE
+	) )
 
 
 func get_keycode_string( key : Key )->String:

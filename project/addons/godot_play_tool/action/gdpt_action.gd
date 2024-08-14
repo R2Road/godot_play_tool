@@ -119,21 +119,3 @@ static func new_split()->GDPTAction:
 	)
 	
 	return ret
-
-
-static func new_lf()->GDPTAction:
-	var ret = GDPTAction.new(
-		"\n"
-		, Key.KEY_NONE
-	)
-	
-	return ret
-
-
-static func new_lf2()->GDPTAction:
-	var ret = GDPTAction.new(
-		"\n\n"
-		, Key.KEY_NONE
-	)
-	
-	return ret
