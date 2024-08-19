@@ -11,11 +11,13 @@ var on_assert = true
 var scene_helper = preload( "res://addons/godot_play_tool/scene/gdpt_scene_helper.gd" )
 
 var helper_circle = preload( "res://addons/godot_play_tool/helper/helper_circle.tscn" )
+var helper_drag = preload( "res://addons/godot_play_tool/helper/helper_drag.tscn" )
 var helper_line = preload( "res://addons/godot_play_tool/helper/helper_line.tscn" )
 var helper_move2center = preload( "res://addons/godot_play_tool/helper/helper_move2center.tscn" )
 var helper_point = preload( "res://addons/godot_play_tool/helper/helper_point.tscn" )
 var helper_rect = preload( "res://addons/godot_play_tool/helper/helper_rect.tscn" )
 var helper_reticle = preload( "res://addons/godot_play_tool/helper/helper_reticle.tscn" )
+var helper_0_0 = preload( "res://addons/godot_play_tool/helper/helper_0_0.tscn" )
 
 
 
