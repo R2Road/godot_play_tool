@@ -75,13 +75,24 @@ metadata/_edit_group_ = true
 [node name="helper_point" parent="helper_circle_3" instance=ExtResource("2_5typv")]
 z_index = 4096
 
-[node name="helper_line" parent="." instance=ExtResource("5_spmwa")]
-position = Vector2(445, 399)
+[node name="helper_line_1" parent="." instance=ExtResource("5_spmwa")]
+position = Vector2(445, 390)
+color = Color(1, 0.335514, 0.269596, 1)
+metadata/_edit_group_ = true
+
+[node name="helper_point" parent="helper_line_1" instance=ExtResource("2_5typv")]
+z_index = 4096
+
+[node name="helper_line_2" parent="." instance=ExtResource("5_spmwa")]
+position = Vector2(445, 420)
 color = Color(1, 0.335514, 0.269596, 1)
 point_end = Vector2(0, 100)
+line_width = 2
+metadata/_edit_group_ = true
 
-[node name="helper_point" parent="helper_line" instance=ExtResource("2_5typv")]
+[node name="helper_point" parent="helper_line_2" instance=ExtResource("2_5typv")]
 z_index = 4096
+position = Vector2(0, 1)
 
 [node name="helper_move2center_test" parent="." instance=ExtResource("2_5typv")]
 z_index = 4096
