@@ -197,7 +197,9 @@ func build_summary()->String:
 				ret += split_string
 				ret += "[/color]"
 			else:
+				ret += "[color=#" + str( i.color_4_message.to_html() ) + "]"
 				ret += ( i.message )
+				ret += "[/color]"
 	
 	return ret
 
