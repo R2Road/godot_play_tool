@@ -176,10 +176,19 @@ func build_summary()->String:
 	for i in container:
 		if Key.KEY_NONE != i.key:
 			ret += (
-				  "["
-					+ "[color=#" + str( i.color_4_key.to_html() ) + "]" + get_keycode_string( i.key ) + "[/color]"
-				+ "] "
-				+ i.name
+				  "[color=#" + str( i.color_4_base.to_html() ) + "]"
+				
+					+ "["
+						+ "[color=#" + str( i.color_4_key.to_html() ) + "]"
+						+ get_keycode_string( i.key )
+						+ "[/color]"
+					+ "] "
+					
+					+ "[color=#" + str( i.color_4_name.to_html() ) + "]"
+					+ i.name
+					+ "[/color]"
+					
+				+ "[/color]"
 				+ "\n"
 			)
 		else:
