@@ -29,4 +29,4 @@ func _init(
 	
 	color_4_name = _color_4_name
 	color_4_key = _color_4_key
-	color_4_base = color_4_base
+	color_4_base = _color_4_base
