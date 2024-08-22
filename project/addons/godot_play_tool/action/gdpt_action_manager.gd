@@ -193,7 +193,9 @@ func build_summary()->String:
 			)
 		else:
 			if "=" == i.name:
+				ret += "[color=dimgray]"
 				ret += split_string
+				ret += "[/color]"
 			else:
 				ret += ( i.name )
 	
