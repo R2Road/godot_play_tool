@@ -12,6 +12,7 @@ func _init():
 	var summary = RichTextLabel.new()
 	summary.name = "Summary"
 	summary.fit_content = true
+	summary.bbcode_enabled = true
 	summary.autowrap_mode = TextServer.AutowrapMode.AUTOWRAP_OFF
 	add_child( summary )
 	

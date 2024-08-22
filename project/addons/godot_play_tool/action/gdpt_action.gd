@@ -20,7 +20,7 @@ func _init(
 	, _action : Callable = ( func(): pass )
 	
 	, _color_4_name = Color.WHITE
-	, _color_4_key = Color.BLUE
+	, _color_4_key = Color.GREEN
 	, _color_4_base = Color.GRAY
 )->void:
 	name = _name

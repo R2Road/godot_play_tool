@@ -175,7 +175,7 @@ func build_summary()->String:
 	
 	for i in container:
 		if Key.KEY_NONE != i.key:
-			ret += ( "[" + get_keycode_string( i.key ) + "] " + i.name + "\n" )
+			ret += ( "[" + "[color=#" + str( i.color_4_key.to_html() ) + "]" + get_keycode_string( i.key ) + "[/color]" + "] " + i.name + "\n" )
 		else:
 			if "=" == i.name:
 				ret += split_string
