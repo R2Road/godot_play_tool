@@ -129,11 +129,15 @@ func add_subject( _message : String ):
 	container.push_back( GDPTAction.new(
 		( "+ " + _message + "\n" )
 		, Key.KEY_NONE
+		, ( func(): pass )
+		, Color.YELLOW
 	) )
 func add_note( _message : String ):
 	container.push_back( GDPTAction.new(
 		( "    > " + _message + "\n" )
 		, Key.KEY_NONE
+		, ( func(): pass )
+		, Color.DARK_TURQUOISE
 	) )
 
 
