@@ -125,6 +125,18 @@ func add_message( _message : String ):
 	) )
 
 
+func add_subject( _message : String ):
+	container.push_back( GDPTAction.new(
+		( "+ " + _message + "\n" )
+		, Key.KEY_NONE
+	) )
+func add_note( _message : String ):
+	container.push_back( GDPTAction.new(
+		( "    > " + _message + "\n" )
+		, Key.KEY_NONE
+	) )
+
+
 func add_lf():
 	container.push_back( GDPTAction.new(
 		"\n"
