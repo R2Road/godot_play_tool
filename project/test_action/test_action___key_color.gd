@@ -21,4 +21,4 @@ func _ready():
 	pam.add_action( "Q", Key.KEY_Q, func(): $Label.text = "q" )
 	pam.add_action( "W", Key.KEY_W, func(): $Label.text = "w" )
 	pam.add_split()
-	build_summary( eSceneType.ROOT )
+	build_summary( eSceneType.TEST )
