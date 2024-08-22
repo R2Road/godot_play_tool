@@ -44,14 +44,14 @@ func add_back( _key : Key ):
 	add_mover( last_scene_name, _key, last_scene_path )
 
 
-func add_mover( _name : String, _key : Key, _scene_path : String ):
+func add_mover( _message : String, _key : Key, _scene_path : String ):
 	GDPT._assert( not _scene_path.is_empty() )
 		
 	if _scene_path.is_empty():
 		return
 		
 	container.push_back( GDPTAction.new(
-		_name
+		_message
 		, _key
 		, func ():
 			#
@@ -103,9 +103,9 @@ func add_mover( _name : String, _key : Key, _scene_path : String ):
 	) )
 
 
-func add_action( _name : String, _key : Key, _functor : Callable ):
+func add_action( _message : String, _key : Key, _functor : Callable ):
 	container.push_back( GDPTAction.new(
-		_name
+		_message
 		, _key
 		, _functor
 	) )
@@ -159,7 +159,7 @@ func build_summary()->String:
 	
 	# calculate length of split string : with action name
 	for j in container:
-		var new_split_length = ( get_keycode_string( j.key ).length() + j.name.length() + 3 ) # 3 is decoration( '[', ']', ' ' )
+		var new_split_length = ( get_keycode_string( j.key ).length() + j.message.length() + 3 ) # 3 is decoration( '[', ']', ' ' )
 		if new_split_length > split_length:
 			split_length = new_split_length
 	
@@ -184,20 +184,20 @@ func build_summary()->String:
 						+ "[/color]"
 					+ "] "
 					
-					+ "[color=#" + str( i.color_4_name.to_html() ) + "]"
-					+ i.name
+					+ "[color=#" + str( i.color_4_message.to_html() ) + "]"
+					+ i.message
 					+ "[/color]"
 					
 				+ "[/color]"
 				+ "\n"
 			)
 		else:
-			if "=" == i.name:
+			if "=" == i.message:
 				ret += "[color=dimgray]"
 				ret += split_string
 				ret += "[/color]"
 			else:
-				ret += ( i.name )
+				ret += ( i.message )
 	
 	return ret
 
