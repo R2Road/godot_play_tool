@@ -41,7 +41,7 @@ func add_exit():
 
 
 func add_back( _key : Key ):
-	add_mover( last_scene_name, _key, last_scene_path )
+	add_mover( "Return 2 <" + last_scene_name + ">", _key, last_scene_path )
 
 
 func add_mover( _message : String, _key : Key, _scene_path : String ):
