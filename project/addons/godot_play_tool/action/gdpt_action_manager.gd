@@ -41,10 +41,14 @@ func add_exit():
 
 
 func add_back( _key : Key ):
-	add_mover( "Return 2 <" + last_scene_name + ">", _key, last_scene_path )
+	build_mover( "RT <" + last_scene_name + ">", _key, last_scene_path )
 
 
 func add_mover( _message : String, _key : Key, _scene_path : String ):
+	build_mover( "MV <" + _message + ">", _key, _scene_path )
+
+
+func build_mover( _message : String, _key : Key, _scene_path : String ):
 	GDPT._assert( not _scene_path.is_empty() )
 		
 	if _scene_path.is_empty():
