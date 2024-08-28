@@ -6,7 +6,7 @@ class_name dev_root extends GDPTScene
 static func scene_name()->String:
 	return ( 
 			"Dev Root"
-		+ 	" <" + GDPT.version + ">"
+		+ 	" ( " + GDPT.version + " )"
 	)
 
 

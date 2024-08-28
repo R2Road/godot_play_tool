@@ -41,11 +41,10 @@ func add_exit():
 
 
 func add_back( _key : Key ):
-	build_mover( "RT <" + last_scene_name + ">", _key, last_scene_path )
-
+	build_mover( "RT [color=dim_gray]>[/color] " + last_scene_name, _key, last_scene_path )
 
 func add_mover( _message : String, _key : Key, _scene_path : String ):
-	build_mover( "MV <" + _message + ">", _key, _scene_path )
+	build_mover( "MV [color=dim_gray]>[/color] " + _message, _key, _scene_path )
 
 
 func build_mover( _message : String, _key : Key, _scene_path : String ):
