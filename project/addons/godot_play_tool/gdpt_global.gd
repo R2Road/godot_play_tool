@@ -31,7 +31,11 @@ func _enter_tree():
 	
 	var cf = ConfigFile.new()
 	cf.load( "res://addons/godot_play_tool/plugin.cfg" )
-	version = cf.get_value( "plugin", "version" )
+	version = (
+		cf.get_value( "plugin", "alias" )
+		+ " : v"
+		+ cf.get_value( "plugin", "version" )
+	)
 
 
 func _exit_tree():

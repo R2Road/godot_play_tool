@@ -4,7 +4,10 @@ class_name dev_root extends GDPTScene
 
 ######################### GDPT Override ##########################
 static func scene_name()->String:
-	return "Dev Root" + " <" + GDPT.version + ">"
+	return ( 
+			"Dev Root"
+		+ 	" <" + GDPT.version + ">"
+	)
 
 
 static func scene_path()->String:
