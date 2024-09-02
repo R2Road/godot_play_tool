@@ -31,7 +31,7 @@ func _process( _delta ):
 	$FPS.text = (
 		str( get_viewport().size.x ) + " x " + str( get_viewport().size.y )
 		+ "\n"
-		+ "fps : " + str( Engine.get_frames_per_second() )
+		+ "fps : " + str( Engine.get_frames_per_second() ) + "/" + str( Engine.max_fps )
 	)
 
 
