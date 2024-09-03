@@ -18,6 +18,7 @@ offset_bottom = 3.0
 text = "Title"
 
 [node name="Value" type="Label" parent="."]
+layout_mode = 0
 offset_left = 9.0
 offset_top = -20.0
 offset_right = 199.0
