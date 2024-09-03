@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://k5vx7qt2cevj"]
+[gd_scene load_steps=10 format=3 uid="uid://k5vx7qt2cevj"]
 
 [ext_resource type="Script" path="res://test_helper/helper_root.gd" id="1_u78kq"]
 [ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://addons/godot_play_tool/helper/helper_point.tscn" id="2_5typv"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="6_wm2l6"]
 [ext_resource type="PackedScene" uid="uid://8pengjsakrxj" path="res://addons/godot_play_tool/helper/helper_reticle.tscn" id="7_442a6"]
 [ext_resource type="PackedScene" uid="uid://dsuaumbxcknhr" path="res://addons/godot_play_tool/helper/helper_0_0.tscn" id="8_5xyjv"]
+[ext_resource type="PackedScene" uid="uid://drl1ho8d50ug8" path="res://addons/godot_play_tool/helper/helper_hslider.tscn" id="9_627tn"]
 
 [node name="helper_root" type="Node2D"]
 script = ExtResource("1_u78kq")
@@ -124,3 +125,9 @@ z_index = 4096
 metadata/_edit_group_ = true
 
 [node name="helper_move2center" parent="helper_reticle" instance=ExtResource("6_wm2l6")]
+
+[node name="helper_hslider" parent="." instance=ExtResource("9_627tn")]
+offset_left = 935.0
+offset_top = 610.0
+offset_right = 1135.0
+offset_bottom = 626.0
