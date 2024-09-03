@@ -1,4 +1,4 @@
-class_name helper_root extends GDPTScene
+class_name test_helper_root extends GDPTScene
 
 
 
@@ -14,7 +14,7 @@ static func scene_path()->String:
 
 ############################ Override ############################
 func _ready():
-	pam.set_name( helper_root.scene_name() )
+	pam.set_name( scene_name() )
 	pam.add_split()
 	pam.add_mover( dev_root.scene_name(),			Key.KEY_ESCAPE, dev_root.scene_path() )
 	pam.add_lf()

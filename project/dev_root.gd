@@ -27,6 +27,6 @@ func _ready():
 	pam.add_lf()
 	pam.add_mover( test_action___root.scene_name(),	Key.KEY_Z,	test_action___root.scene_path() )
 	pam.add_split()
-	pam.add_mover( helper_root.scene_name(),	Key.KEY_SPACE,	helper_root.scene_path() )
+	pam.add_mover( test_helper_root.scene_name(),	Key.KEY_SPACE,	test_helper_root.scene_path() )
 	pam.add_split()
 	build_summary( eSceneType.ROOT )
