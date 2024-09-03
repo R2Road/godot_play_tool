@@ -24,7 +24,7 @@ func set_last_scene( _last_scene_name : String, _last_scene_path : String ):
 
 func add_exit():
 	container.push_back( GDPTAction.new(
-		"Exit"
+		"[color=webgray]Exit[/color]"
 		, Key.KEY_ESCAPE
 		, func ():
 			#
@@ -41,10 +41,13 @@ func add_exit():
 
 
 func add_back( _key : Key ):
-	build_mover( "RT [color=dim_gray]>[/color] " + last_scene_name, _key, last_scene_path )
+	build_mover( "[color=dark_goldenrod]<<[/color] " + last_scene_name, _key, last_scene_path )
 
+func add_front( _message : String, _key : Key, _scene_path : String ):
+	build_mover( "[color=dark_goldenrod]<<[/color] " + _message, _key, _scene_path )
+	
 func add_mover( _message : String, _key : Key, _scene_path : String ):
-	build_mover( "MV [color=dim_gray]>[/color] " + _message, _key, _scene_path )
+	build_mover( "[color=gold]>>[/color] " + _message, _key, _scene_path )
 
 
 func build_mover( _message : String, _key : Key, _scene_path : String ):

@@ -13,7 +13,7 @@ func _ready():
 	pam.set_name( scene_name() )
 	pam.add_split()
 	pam.add_lf()
-	pam.add_mover( dev_root.scene_name(),		Key.KEY_ESCAPE, 	"res://dev_root.tscn" )
+	pam.add_front( dev_root.scene_name(),		Key.KEY_ESCAPE, 	"res://dev_root.tscn" )
 	pam.add_lf()
 	pam.add_lf()
 	pam.add_mover( test_action_1.scene_name(),	Key.KEY_Q, 			"res://test_action_1.tscn" )

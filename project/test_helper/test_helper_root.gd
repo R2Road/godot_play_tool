@@ -16,7 +16,7 @@ static func scene_path()->String:
 func _ready():
 	pam.set_name( scene_name() )
 	pam.add_split()
-	pam.add_mover( dev_root.scene_name(),			Key.KEY_ESCAPE, dev_root.scene_path() )
+	pam.add_front( dev_root.scene_name(),			Key.KEY_ESCAPE, dev_root.scene_path() )
 	pam.add_lf()
 	pam.add_mover( helper_move2center_with_viewport.scene_name(),	Key.KEY_1, helper_move2center_with_viewport.scene_path() )
 	pam.add_mover( helper_move2center_with_camera2d.scene_name(),	Key.KEY_2, helper_move2center_with_camera2d.scene_path() )
