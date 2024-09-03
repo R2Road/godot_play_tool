@@ -26,6 +26,7 @@ func _ready():
 	root.position = Vector2( 100, 100 )
 	add_child( root )
 	
+	#
 	root.add_child( GDPT.helper_0_0.instantiate() )
 	root.add_child( GDPT.helper_circle.instantiate() )
 	root.add_child( GDPT.helper_drag.instantiate() )
@@ -34,3 +35,6 @@ func _ready():
 	root.add_child( GDPT.helper_point.instantiate() )
 	root.add_child( GDPT.helper_rect.instantiate() )
 	root.add_child( GDPT.helper_reticle.instantiate() )
+	
+	#
+	root.add_child( GDPT.helper_hslider.instantiate() )
