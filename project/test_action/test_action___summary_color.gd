@@ -1,10 +1,10 @@
-class_name test_action___key_color extends GDPTScene
+class_name test_action___summary_color extends GDPTScene
 
 
 
 ######################### GDPT Override ##########################
 static func scene_name()->String:
-	return "Action : Key Color"
+	return "Action : Summary Color"
 
 
 static func scene_path()->String:
