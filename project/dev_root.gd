@@ -25,7 +25,7 @@ func _ready():
 	pam.add_lf()
 	pam.add_mover( "Test Action 1",	Key.KEY_Q, 		"res://test_action_1.tscn" )
 	pam.add_lf()
-	pam.add_mover( test_action___root.scene_name(),	Key.KEY_Z,	test_action___root.scene_path() )
+	pam.add_mover( test_action_root.scene_name(),	Key.KEY_Z,	test_action_root.scene_path() )
 	pam.add_split()
 	pam.add_mover( test_helper_root.scene_name(),	Key.KEY_SPACE,	test_helper_root.scene_path() )
 	pam.add_split()

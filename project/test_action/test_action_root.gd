@@ -1,4 +1,4 @@
-class_name test_action___root extends GDPTScene
+class_name test_action_root extends GDPTScene
 
 
 

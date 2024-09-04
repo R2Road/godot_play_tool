@@ -18,7 +18,7 @@ func _ready():
 	pam.add_split()
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_split()
-	pam.add_mover( test_action___root.scene_name(),		Key.KEY_SPACE, test_action___root.scene_path() )
+	pam.add_mover( test_action_root.scene_name(),		Key.KEY_SPACE, test_action_root.scene_path() )
 	pam.add_split()
 	pam.add_action( "Q", Key.KEY_Q, func(): $Label.text = "q" )
 	pam.add_action( "W", Key.KEY_W, func(): $Label.text = "w" )
