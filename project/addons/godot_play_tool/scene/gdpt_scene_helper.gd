@@ -14,6 +14,7 @@ func _init():
 	summary.fit_content = true
 	summary.bbcode_enabled = true
 	summary.autowrap_mode = TextServer.AutowrapMode.AUTOWRAP_OFF
+	summary.mouse_filter = Control.MouseFilter.MOUSE_FILTER_IGNORE
 	add_child( summary )
 	
 	var fps_label = Label.new()
