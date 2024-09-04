@@ -16,7 +16,12 @@ static func scene_path()->String:
 func _ready():
 	pam.set_name( scene_name() )
 	pam.add_split()
+	pam.add_lf()
 	pam.add_back( Key.KEY_ESCAPE )
+	pam.add_lf()
+	pam.add_subject( "GDPT에 미리 읽기 해놓은 helper의 packed_scene들 : Link 점검" )
+	pam.add_lf()
+	pam.add_split()
 	build_summary( eSceneType.TEST )
 	
 	#
