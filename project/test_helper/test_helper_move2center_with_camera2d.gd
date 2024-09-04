@@ -1,4 +1,4 @@
-class_name helper_move2center_with_camera2d extends GDPTScene
+class_name test_helper_move2center_with_camera2d extends GDPTScene
 
 
 
