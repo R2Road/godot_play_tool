@@ -16,7 +16,6 @@ metadata/_edit_group_ = true
 
 [node name="helper_drag" parent="Drag1" instance=ExtResource("4_e8ph7")]
 rect = Rect2(-50, -50, 100, 100)
-out_line_bold = 5.0
 
 [node name="Status" type="Label" parent="Drag1"]
 offset_left = 54.0
@@ -36,7 +35,6 @@ metadata/_edit_group_ = true
 
 [node name="helper_drag" parent="Drag2" instance=ExtResource("4_e8ph7")]
 rect = Rect2(-50, -50, 100, 100)
-out_line_bold = 5.0
 
 [node name="helper_point" parent="." instance=ExtResource("4_25si7")]
 z_index = 4096
