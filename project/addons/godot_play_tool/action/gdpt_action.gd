@@ -40,6 +40,7 @@ func _init(
 	key = _key
 	action = _action
 	
+	decoration = _decoration
 	color_4_message = _color_4_message
 	color_4_key = _color_4_key
 	color_4_base = _color_4_base

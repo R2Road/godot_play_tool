@@ -218,32 +218,34 @@ func build_summary()->String:
 		ret = ( "# " + name + "\n" )
 	
 	for i in container:
-		if Key.KEY_NONE != i.key:
-			ret += (
-				  "[color=#" + str( i.color_4_base.to_html() ) + "]"
-				
-					+ "["
-						+ "[color=#" + str( i.color_4_key.to_html() ) + "]"
-						+ get_keycode_string( i.key )
-						+ "[/color]"
-					+ "] "
-					
-					+ "[color=#" + str( i.color_4_message.to_html() ) + "]"
-					+ i.message
-					+ "[/color]"
-					
-				+ "[/color]"
-				+ "\n"
-			)
-		else:
-			if "=" == i.message:
-				ret += "[color=dimgray]"
-				ret += split_string
-				ret += "[/color]"
-			else:
+		match i.decoration:
+			GDPTAction.eDecoration.MessageOnly:
 				ret += "[color=#" + str( i.color_4_message.to_html() ) + "]"
 				ret += ( i.message )
 				ret += "[/color]"
+			GDPTAction.eDecoration.LineSplit:
+				ret += "[color=dimgray]"
+				ret += split_string
+				ret += "[/color]"
+			GDPTAction.eDecoration.Nothing:
+				ret += i.message
+			_:
+				ret += (
+					"[color=#" + str( i.color_4_base.to_html() ) + "]"
+					
+						+ "["
+							+ "[color=#" + str( i.color_4_key.to_html() ) + "]"
+							+ get_keycode_string( i.key )
+							+ "[/color]"
+						+ "] "
+						
+						+ "[color=#" + str( i.color_4_message.to_html() ) + "]"
+						+ i.message
+						+ "[/color]"
+						
+					+ "[/color]"
+					+ "\n"
+				)
 	
 	return ret
 
