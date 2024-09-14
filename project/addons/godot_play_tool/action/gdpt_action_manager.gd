@@ -33,10 +33,8 @@ func add_exit():
 			# 키를 동시에 2개 이상 누른 경우
 			# 한 프레임에 여러번의 Scene 전환 가능
 			#
-			if owner != owner.get_tree().current_scene:
-				return
-			
-			owner.get_tree().change_scene_to_file( "res://addons/godot_play_tool/scene/gdpt_scene_exit.tscn" )
+			if owner == owner.get_tree().current_scene:
+				owner.get_tree().change_scene_to_file( "res://addons/godot_play_tool/scene/gdpt_scene_exit.tscn" )
 	) )
 
 
