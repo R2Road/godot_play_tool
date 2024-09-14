@@ -35,21 +35,37 @@ func add_exit():
 			#
 			if owner == owner.get_tree().current_scene:
 				owner.get_tree().change_scene_to_file( "res://addons/godot_play_tool/scene/gdpt_scene_exit.tscn" ) )
+		, GDPTAction.eDecoration.Key_N_Message
 		, Color.WEB_GRAY
 	) )
 
 
 func add_back( _key : Key ):
-	build_mover( "[color=dark_goldenrod]<<[/color] " + last_scene_name, _key, last_scene_path )
+	build_mover(
+		  "[color=dark_goldenrod]<<[/color] " + last_scene_name
+		, _key
+		, last_scene_path
+		, GDPTAction.eDecoration.MoveBack
+	)
 
 func add_front( _message : String, _key : Key, _scene_path : String ):
-	build_mover( "[color=dark_goldenrod]<<[/color] " + _message, _key, _scene_path )
+	build_mover(
+		  "[color=dark_goldenrod]<<[/color] " + _message
+		, _key
+		, _scene_path
+		, GDPTAction.eDecoration.MoveFront
+	)
 	
 func add_mover( _message : String, _key : Key, _scene_path : String ):
-	build_mover( "[color=gold]>>[/color] " + _message, _key, _scene_path )
+	build_mover(
+		  "[color=gold]>>[/color] " + _message
+		, _key
+		, _scene_path
+		, GDPTAction.eDecoration.MoveBack
+	)
 
 
-func build_mover( _message : String, _key : Key, _scene_path : String ):
+func build_mover( _message : String, _key : Key, _scene_path : String, _decoration : GDPTAction.eDecoration ):
 	GDPT._assert( not _scene_path.is_empty() )
 		
 	if _scene_path.is_empty():
@@ -58,7 +74,7 @@ func build_mover( _message : String, _key : Key, _scene_path : String ):
 	container.push_back( GDPTAction.new(
 		_message
 		, _key
-		, func ():
+		, ( func ():
 			#
 			# Scene 전환이 이미 일어났는지 확인
 			# GDPTAction은 call_deferred 로 작동한다.
@@ -105,6 +121,8 @@ func build_mover( _message : String, _key : Key, _scene_path : String ):
 			# 같은 instance id 가 1번 이상 출력되면
 			# 한 프레임에 scene 전환이 여러번 수행된 것이다.
 			# print( "Last Scene Instance ID : " + str( _owner.get_instance_id() ) )
+			)
+		, _decoration
 	) )
 
 
@@ -113,6 +131,7 @@ func add_action( _message : String, _key : Key, _functor : Callable ):
 		_message
 		, _key
 		, _functor
+		, GDPTAction.eDecoration.UserDefineAction
 	) )
 
 
@@ -120,6 +139,8 @@ func add_split():
 	container.push_back( GDPTAction.new(
 		"="
 		, Key.KEY_NONE
+		, ( func(): pass )
+		, GDPTAction.eDecoration.LineSplit
 	) )
 
 
@@ -135,6 +156,7 @@ func add_subject( _message : String ):
 		( "+ " + _message + "\n" )
 		, Key.KEY_NONE
 		, ( func(): pass )
+		, GDPTAction.eDecoration.MessageOnly
 		, Color.YELLOW
 	) )
 func add_note( _message : String ):
@@ -142,6 +164,7 @@ func add_note( _message : String ):
 		( "    > " + _message + "\n" )
 		, Key.KEY_NONE
 		, ( func(): pass )
+		, GDPTAction.eDecoration.MessageOnly
 		, Color.DARK_TURQUOISE
 	) )
 
