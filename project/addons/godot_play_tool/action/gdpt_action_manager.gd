@@ -35,22 +35,25 @@ func add_exit():
 			#
 			if owner == owner.get_tree().current_scene:
 				owner.get_tree().change_scene_to_file( "res://addons/godot_play_tool/scene/gdpt_scene_exit.tscn" ) )
-		, GDPTAction.eDecoration.Key_N_Message
+		, GDPTAction.eDecoration.Exit
 		, Color.WEB_GRAY
 	) )
 
 
 func add_back( _key : Key ):
 	build_mover(
-		  "[color=dark_goldenrod]<<[/color] " + last_scene_name
+		  last_scene_name
 		, _key
 		, last_scene_path
 		, GDPTAction.eDecoration.MoveBack
 	)
 
+# add mover 와 같지만 장식의 차이만 달리 준다.
+# 종종 add_back을 부르지 않고 직접 scene을 지정해 같은 기능을 제공할 필요가 있다.
+# 그 상황을 위한 것이다.
 func add_front( _message : String, _key : Key, _scene_path : String ):
 	build_mover(
-		  "[color=dark_goldenrod]<<[/color] " + _message
+		  _message
 		, _key
 		, _scene_path
 		, GDPTAction.eDecoration.MoveFront
@@ -58,10 +61,10 @@ func add_front( _message : String, _key : Key, _scene_path : String ):
 	
 func add_mover( _message : String, _key : Key, _scene_path : String ):
 	build_mover(
-		  "[color=gold]>>[/color] " + _message
+		  _message
 		, _key
 		, _scene_path
-		, GDPTAction.eDecoration.MoveBack
+		, GDPTAction.eDecoration.MoveNext
 	)
 
 
@@ -217,35 +220,54 @@ func build_summary()->String:
 	if not name.is_empty():
 		ret = ( "# " + name + "\n" )
 	
-	for i in container:
+	var fixed_message : String
+	for i : GDPTAction in container:
+		
+		fixed_message = ""
+		
+		# 특별한 글자 꾸미기 처리
 		match i.decoration:
+			GDPTAction.eDecoration.MoveFront:
+				fixed_message = ( "[color=dark_goldenrod]<<[/color] " + i.message )
+			GDPTAction.eDecoration.MoveBack:
+				fixed_message = ( "[color=dark_goldenrod]<<[/color] " + i.message )
+			GDPTAction.eDecoration.MoveNext:
+				fixed_message = ( "[color=gold]>>[/color] " + i.message )
 			GDPTAction.eDecoration.MessageOnly:
-				ret += "[color=#" + str( i.color_4_message.to_html() ) + "]"
-				ret += ( i.message )
-				ret += "[/color]"
+				fixed_message += "[color=#" + str( i.color_4_message.to_html() ) + "]"
+				fixed_message += ( i.message )
+				fixed_message += "[/color]"
 			GDPTAction.eDecoration.LineSplit:
-				ret += "[color=dimgray]"
-				ret += split_string
-				ret += "[/color]"
-			GDPTAction.eDecoration.Nothing:
-				ret += i.message
+				fixed_message += "[color=dimgray]"
+				fixed_message += split_string
+				fixed_message += "[/color]"
+			GDPTAction.eDecoration.Exit, GDPTAction.eDecoration.UserDefineAction, GDPTAction.eDecoration.Nothing:
+				fixed_message = i.message
 			_:
-				ret += (
-					"[color=#" + str( i.color_4_base.to_html() ) + "]"
-					
-						+ "["
-							+ "[color=#" + str( i.color_4_key.to_html() ) + "]"
-							+ get_keycode_string( i.key )
-							+ "[/color]"
-						+ "] "
-						
-						+ "[color=#" + str( i.color_4_message.to_html() ) + "]"
-						+ i.message
+				GDPT._assert_f()
+		
+		# 공용 메세지 꾸미기.
+		if ( GDPTAction.eDecoration.Nothing == i.decoration
+		  or GDPTAction.eDecoration.MessageOnly == i.decoration
+		  or GDPTAction.eDecoration.LineSplit == i.decoration ):
+			ret += fixed_message
+		else:
+			ret += (
+				"[color=#" + str( i.color_4_base.to_html() ) + "]"
+				
+					+ "["
+						+ "[color=#" + str( i.color_4_key.to_html() ) + "]"
+						+ get_keycode_string( i.key )
 						+ "[/color]"
-						
+					+ "] "
+					
+					+ "[color=#" + str( i.color_4_message.to_html() ) + "]"
+					+ fixed_message
 					+ "[/color]"
-					+ "\n"
-				)
+					
+				+ "[/color]"
+				+ "\n"
+			)
 	
 	return ret
 

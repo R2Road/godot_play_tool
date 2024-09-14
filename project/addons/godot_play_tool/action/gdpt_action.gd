@@ -5,10 +5,11 @@ class_name GDPTAction extends RefCounted
 ############################ Variable ############################
 enum eDecoration
 {
-	Nothing,
-	Key_N_Message, # Default
+	Nothing, # Default
+	Exit,
 	MoveFront,
 	MoveBack,
+	MoveNext,
 	UserDefineAction,
 	MessageOnly,
 	LineSplit,
