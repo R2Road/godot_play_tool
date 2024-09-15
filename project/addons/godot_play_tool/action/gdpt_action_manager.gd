@@ -70,10 +70,10 @@ func add_mover( _message : String, _key : Key, _scene_path : String ):
 
 func build_mover( _message : String, _key : Key, _scene_path : String, _decoration : GDPTAction.eDecoration ):
 	GDPT._assert( not _scene_path.is_empty() )
-		
+	
 	if _scene_path.is_empty():
 		return
-		
+	
 	container.push_back( GDPTAction.new(
 		_message
 		, _key
