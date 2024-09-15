@@ -37,6 +37,7 @@ func add_exit():
 				owner.get_tree().change_scene_to_file( "res://addons/godot_play_tool/scene/gdpt_scene_exit.tscn" ) )
 		, GDPTAction.eDecoration.Exit
 		, Color.WEB_GRAY
+		, Color.SEA_GREEN
 	) )
 
 
@@ -47,6 +48,7 @@ func add_back( _key : Key ):
 		, build_mover( last_scene_path )
 		, GDPTAction.eDecoration.MoveBack
 		, Color.DARK_GRAY
+		, Color.FOREST_GREEN
 	) )
 
 # add mover 와 같지만 장식의 차이만 달리 준다.
@@ -59,6 +61,7 @@ func add_front( _message : String, _key : Key, _scene_path : String ):
 		, build_mover( _scene_path )
 		, GDPTAction.eDecoration.MoveFront
 		, Color.DARK_GRAY
+		, Color.FOREST_GREEN
 	) )
 	
 func add_mover( _message : String, _key : Key, _scene_path : String ):
