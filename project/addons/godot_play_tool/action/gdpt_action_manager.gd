@@ -46,6 +46,7 @@ func add_back( _key : Key ):
 		, _key
 		, build_mover( last_scene_path )
 		, GDPTAction.eDecoration.MoveBack
+		, Color.DARK_GRAY
 	) )
 
 # add mover 와 같지만 장식의 차이만 달리 준다.
@@ -57,6 +58,7 @@ func add_front( _message : String, _key : Key, _scene_path : String ):
 		, _key
 		, build_mover( _scene_path )
 		, GDPTAction.eDecoration.MoveFront
+		, Color.DARK_GRAY
 	) )
 	
 func add_mover( _message : String, _key : Key, _scene_path : String ):
