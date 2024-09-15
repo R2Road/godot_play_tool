@@ -63,7 +63,16 @@ func add_front( _message : String, _key : Key, _scene_path : String ):
 		, Color.DARK_GRAY
 		, Color.FOREST_GREEN
 	) )
-	
+
+func add_root( _message : String, _key : Key, _scene_path : String ):
+	container.push_back( GDPTAction.new(
+		  _message
+		, _key
+		, build_mover( _scene_path )
+		, GDPTAction.eDecoration.MoveNext
+		, Color.SKY_BLUE
+	) )
+
 func add_mover( _message : String, _key : Key, _scene_path : String ):
 	container.push_back( GDPTAction.new(
 		  _message
@@ -168,7 +177,7 @@ func add_note( _message : String ):
 		, Key.KEY_NONE
 		, ( func(): pass )
 		, GDPTAction.eDecoration.MessageOnly
-		, Color.DARK_TURQUOISE
+		, Color.DARK_ORANGE
 	) )
 
 
