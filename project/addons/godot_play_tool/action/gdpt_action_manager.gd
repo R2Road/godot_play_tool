@@ -41,43 +41,40 @@ func add_exit():
 
 
 func add_back( _key : Key ):
-	build_mover(
+	container.push_back( GDPTAction.new(
 		  last_scene_name
 		, _key
-		, last_scene_path
+		, build_mover( last_scene_path )
 		, GDPTAction.eDecoration.MoveBack
-	)
+	) )
 
 # add mover 와 같지만 장식의 차이만 달리 준다.
 # 종종 add_back을 부르지 않고 직접 scene을 지정해 같은 기능을 제공할 필요가 있다.
 # 그 상황을 위한 것이다.
 func add_front( _message : String, _key : Key, _scene_path : String ):
-	build_mover(
+	container.push_back( GDPTAction.new(
 		  _message
 		, _key
-		, _scene_path
+		, build_mover( _scene_path )
 		, GDPTAction.eDecoration.MoveFront
-	)
+	) )
 	
 func add_mover( _message : String, _key : Key, _scene_path : String ):
-	build_mover(
+	container.push_back( GDPTAction.new(
 		  _message
 		, _key
-		, _scene_path
+		, build_mover( _scene_path )
 		, GDPTAction.eDecoration.MoveNext
-	)
+	) )
 
 
-func build_mover( _message : String, _key : Key, _scene_path : String, _decoration : GDPTAction.eDecoration ):
+func build_mover( _scene_path : String )->Callable:
 	GDPT._assert( not _scene_path.is_empty() )
 	
 	if _scene_path.is_empty():
-		return
+		return Callable()
 	
-	container.push_back( GDPTAction.new(
-		_message
-		, _key
-		, ( func ():
+	return ( func ():
 			#
 			# Scene 전환이 이미 일어났는지 확인
 			# GDPTAction은 call_deferred 로 작동한다.
@@ -124,9 +121,7 @@ func build_mover( _message : String, _key : Key, _scene_path : String, _decorati
 			# 같은 instance id 가 1번 이상 출력되면
 			# 한 프레임에 scene 전환이 여러번 수행된 것이다.
 			# print( "Last Scene Instance ID : " + str( _owner.get_instance_id() ) )
-			)
-		, _decoration
-	) )
+	)
 
 
 func add_action( _message : String, _key : Key, _functor : Callable ):
