@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwbrx23u55h4m"]
+
+[ext_resource type="Script" path="res://test_action/test_action_mover___node2d_2_gdpt_scene.gd" id="1_ity4r"]
+
+[node name="TestActionMover___Node2D2GDPTScene" type="Node2D"]
+script = ExtResource("1_ity4r")
+
+[node name="Camera2D" type="Camera2D" parent="."]
