@@ -118,7 +118,7 @@ func build_mover( _scene_path : String )->Callable:
 			# SceneTree 의 change scene 을 사용하지 않고 scene 전환 효과를 만든다.
 			#
 			var next_scene = ResourceLoader.load( _scene_path ).instantiate()
-			if next_scene is GDPTScene:
+			if ( next_scene is GDPTScene ) and ( owner is GDPTScene ):
 				next_scene.pam.set_last_scene( owner.pam.name, owner.scene_file_path )
 			else:
 				print_debug( "warning : is not GDPTScene" )
