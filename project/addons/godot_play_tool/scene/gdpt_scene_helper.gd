@@ -8,7 +8,7 @@ var play_action_manager : GDPTActionManager = GDPTActionManager.new()
 
 
 ############################ Override ############################
-func _init():
+func _init()->void:
 	var summary = RichTextLabel.new()
 	summary.name = "Summary"
 	summary.fit_content = true
@@ -22,13 +22,13 @@ func _init():
 	add_child( fps_label )
 
 
-func _enter_tree():
+func _enter_tree()->void:
 	# 한 번 만 위치를 설정한다.
 	$FPS.text = " \n " # 높이 할당을 위한 문자열 설정
 	$FPS.position.y = get_viewport().size.y - $FPS.get_minimum_size().y
 
 
-func _process( _delta ):
+func _process( _delta : float )->void:
 	$FPS.text = (
 		str( get_viewport().size.x ) + " x " + str( get_viewport().size.y )
 		+ "\n"
@@ -36,5 +36,5 @@ func _process( _delta ):
 	)
 
 
-func _input( event ):
+func _input( event )->void:
 	play_action_manager.do( event )

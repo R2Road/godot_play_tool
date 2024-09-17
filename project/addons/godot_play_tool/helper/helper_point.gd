@@ -12,10 +12,10 @@ extends Node2D
 
 
 ############################ Override ############################
-func _init():
+func _init()->void:
 	self.set_z_index( RenderingServer.CANVAS_ITEM_Z_MAX )
 	#self.z_index = RenderingServer.CANVAS_ITEM_Z_MAX
 
 
-func _draw():
+func _draw()->void:
 	draw_circle( Vector2( 0, 0 ), 3, color )

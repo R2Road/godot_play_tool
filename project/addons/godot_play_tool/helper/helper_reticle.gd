@@ -24,11 +24,11 @@ extends Node2D
 
 
 ############################ Override ############################
-func _init():
+func _init()->void:
 	self.set_z_index( RenderingServer.CANVAS_ITEM_Z_MAX )
 	#self.z_index = RenderingServer.CANVAS_ITEM_Z_MAX
 
 
-func _draw():
+func _draw()->void:
 	draw_line( Vector2( -length * 0.5, 0 ), Vector2( length * 0.5, 0 ), color_h, line_width )
 	draw_line( Vector2( 0, -length * 0.5 ), Vector2( 0, length * 0.5 ), color_v, line_width )
