@@ -1,4 +1,4 @@
-extends CanvasLayer
+class_name GDPTSceneHelper extends CanvasLayer
 
 
 
