@@ -15,17 +15,15 @@ func _init()->void:
 	summary.bbcode_enabled = true
 	summary.autowrap_mode = TextServer.AutowrapMode.AUTOWRAP_OFF
 	summary.mouse_filter = Control.MouseFilter.MOUSE_FILTER_IGNORE
+	summary.set_anchors_preset( Control.LayoutPreset.PRESET_TOP_LEFT )
 	add_child( summary )
 	
 	var fps_label = Label.new()
 	fps_label.name = "FPS"
+	fps_label.text = " \n\n\n " # 높이 할당을 위한 문자열 설정
+	fps_label.offset_top = ( -fps_label.get_minimum_size().y )
+	fps_label.set_anchors_preset( Control.LayoutPreset.PRESET_BOTTOM_LEFT )
 	add_child( fps_label )
-
-
-func _enter_tree()->void:
-	# 한 번 만 위치를 설정한다.
-	$FPS.text = " \n\n\n " # 높이 할당을 위한 문자열 설정
-	$FPS.position.y = get_viewport().size.y - $FPS.get_minimum_size().y
 
 
 func _process( _delta : float )->void:
