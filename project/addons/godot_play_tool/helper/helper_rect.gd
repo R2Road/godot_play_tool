@@ -3,7 +3,7 @@ extends Node2D
 
 
 
-############################ Variable ############################
+############################  Export  ############################
 @export var rect : Rect2 = Rect2( 0, 0, 10, 10 ):
 	set( value ):
 		rect = value

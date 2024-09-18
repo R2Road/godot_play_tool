@@ -3,7 +3,7 @@ extends Node2D
 
 
 
-############################ Variable ############################
+############################  Export  ############################
 @export var color_h = Color( 1, 0, 0 ):
 	set( value ):
 		color_h = value

@@ -3,7 +3,7 @@ extends Node2D
 
 
 
-############################ Variable ############################
+############################  Export  ############################
 @export var offset : Vector2 = Vector2( 0, 0 ):
 	set( value ):
 		offset = value
