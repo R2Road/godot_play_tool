@@ -24,13 +24,17 @@ func _init()->void:
 
 func _enter_tree()->void:
 	# 한 번 만 위치를 설정한다.
-	$FPS.text = " \n " # 높이 할당을 위한 문자열 설정
+	$FPS.text = " \n\n\n " # 높이 할당을 위한 문자열 설정
 	$FPS.position.y = get_viewport().size.y - $FPS.get_minimum_size().y
 
 
 func _process( _delta : float )->void:
 	$FPS.text = (
-		str( get_viewport().size.x ) + " x " + str( get_viewport().size.y )
+		  "Display : " + str( DisplayServer.screen_get_size().x ) + " x " + str( DisplayServer.screen_get_size().y )
+		+ "\n"
+		+ "Window : " + str( get_window().size.x ) + " x " + str( get_window().size.y )
+		+ "\n"
+		+ "Project : " + str( ProjectSettings.get_setting( "display/window/size/viewport_width" ) ) + " x " + str( ProjectSettings.get_setting( "display/window/size/viewport_height" ) )
 		+ "\n"
 		+ "fps : " + str( Engine.get_frames_per_second() ) + "/" + str( Engine.max_fps )
 	)
