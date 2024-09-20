@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://x3klx4p7o4vj"]
+
+[ext_resource type="Script" path="res://test_helper/test_helper___code.gd" id="1_p2xjl"]
+[ext_resource type="PackedScene" uid="uid://cpuuwp2254hm2" path="res://addons/godot_play_tool/helper/helper_code.tscn" id="2_weisi"]
+
+[node name="test_helper___code" type="Node2D"]
+script = ExtResource("1_p2xjl")
+
+[node name="helper_code_1" parent="." instance=ExtResource("2_weisi")]
+offset_left = 680.0
+offset_right = 1148.0
+delimiter_strings = Array[String](["' '", "\" \""])

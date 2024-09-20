@@ -12,9 +12,10 @@ func show_code( path : String, line_start : int, line_end : int )->void:
 	
 	# Code 구성.
 	var code : String
-	for i in range( line_start, line_end ):
+	for i in range( line_start, line_end + 1 ):
 		code += file.get_line()
-		code += "\n"
+		if i != line_end:
+			code += "\n"
 	
 	# Show
 	self.text = code

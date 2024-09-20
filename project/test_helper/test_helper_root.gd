@@ -24,5 +24,7 @@ func _ready():
 	pam.add_mover( test_helper_drag.scene_name(),			Key.KEY_Q, test_helper_drag.scene_path() )
 	pam.add_mover( test_helper_debug_print.scene_name(),	Key.KEY_W, test_helper_debug_print.scene_path() )
 	pam.add_lf()
+	pam.add_mover( test_helper___code.scene_name(),			Key.KEY_A, test_helper___code.scene_path() )
+	pam.add_lf()
 	pam.add_mover( test_helper_with_global.scene_name(),	Key.KEY_SPACE, test_helper_with_global.scene_path() )
 	build_summary( eSceneType.TEST )
