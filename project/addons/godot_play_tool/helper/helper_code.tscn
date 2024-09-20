@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpuuwp2254hm2"]
+
+[ext_resource type="Script" path="res://addons/godot_play_tool/helper/helper_code.gd" id="1_k6oce"]
+
+[node name="helper_code" type="CodeEdit"]
+offset_right = 468.0
+offset_bottom = 360.0
+gutters_draw_line_numbers = true
+delimiter_strings = Array[String](["\" \"", "' '"])
+script = ExtResource("1_k6oce")

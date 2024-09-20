@@ -43,3 +43,6 @@ func _ready():
 	
 	#
 	root.add_child( GDPT.helper_hslider.instantiate() )
+	
+	#
+	root.add_child( GDPT.helper_code.instantiate() )
