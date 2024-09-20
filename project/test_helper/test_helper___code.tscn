@@ -8,5 +8,7 @@ script = ExtResource("1_p2xjl")
 
 [node name="helper_code_1" parent="." instance=ExtResource("2_weisi")]
 offset_left = 680.0
+offset_top = 46.0
 offset_right = 1148.0
-delimiter_strings = Array[String](["' '", "\" \""])
+offset_bottom = 406.0
+delimiter_strings = Array[String](["\" \"", "' '"])

@@ -19,3 +19,6 @@ func show_code( path : String, line_start : int, line_end : int )->void:
 	
 	# Show
 	self.text = code
+	
+	# File Name
+	$file_info.text = path + " | " + str( line_start ) + " ~ " + str( line_end )

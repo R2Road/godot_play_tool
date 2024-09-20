@@ -6,5 +6,15 @@
 offset_right = 468.0
 offset_bottom = 360.0
 gutters_draw_line_numbers = true
-delimiter_strings = Array[String](["\" \"", "' '"])
 script = ExtResource("1_k6oce")
+
+[node name="file_info" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_right = 107.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "path | 00 ~ 00"
