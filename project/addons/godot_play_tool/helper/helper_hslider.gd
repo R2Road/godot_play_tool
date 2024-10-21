@@ -1,6 +1,6 @@
 extends HSlider
 
-############################ Summary ############################
+### Summary #####################################################
 #
 # + 2024.09.18 by R
 #
@@ -14,6 +14,6 @@ extends HSlider
 
 
 
-########################  Signal Function  #######################
+### Signal Function #############################################
 func _on_value_changed( value : float )->void:
 	$Value.text = str( value )
