@@ -14,6 +14,12 @@ extends HSlider
 
 
 
+### Node : Override #############################################
+func _ready()->void:
+	_on_value_changed( self.value )
+
+
+
 ### Signal Function #############################################
 func _on_value_changed( value : float )->void:
 	$Value.text = str( value )
