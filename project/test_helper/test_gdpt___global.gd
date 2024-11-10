@@ -2,7 +2,7 @@ class_name test_gdpt___global extends GDPTScene
 
 
 
-######################### GDPT Override ##########################
+### GDPT Override ################################################
 static func scene_name()->String:
 	return "Global with Helper"
 
@@ -12,7 +12,7 @@ static func scene_path()->String:
 
 
 
-############################ Override ############################
+### Override #####################################################
 func _ready():
 	pam.set_name( scene_name() )
 	pam.add_split()

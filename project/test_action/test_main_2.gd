@@ -2,13 +2,13 @@ class_name test_main_2 extends GDPTScene
 
 
 
-######################### GDPT Override ##########################
+### GDPT Override ################################################
 static func scene_name()->String:
 	return "Test Main 2"
 
 
 
-############################ Override ############################
+### Override #####################################################
 func _ready():
 	pam.set_name( scene_name() )
 	pam.add_split()

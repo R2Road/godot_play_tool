@@ -2,7 +2,7 @@ class_name test_action_mover___node2d_2_gdpt_scene extends Node2D
 
 
 
-######################### GDPT Support ###########################
+### GDPT Override ################################################
 static func scene_name()->String:
 	return "Action Mover : Node2D 2 GDPTScene"
 
@@ -12,7 +12,7 @@ static func scene_path()->String:
 
 
 
-############################ Override ############################
+### Override #####################################################
 func _ready():
 	#
 	# for Test

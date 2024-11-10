@@ -2,7 +2,7 @@ extends Node
 
 
 
-############################ Variable ############################
+### Variable #####################################################
 var version : String
 
 var on_debug = true
@@ -28,7 +28,7 @@ var helper_code_scene = preload( "res://addons/godot_play_tool/helper/helper_cod
 
 
 
-############################ Override ############################
+### Override #####################################################
 func _init()->void:
 	add_to_group( "autoload" )
 
@@ -51,7 +51,7 @@ func _exit_tree()->void:
 
 
 
-############################   User   ############################
+### Interface ####################################################
 func build_scene_helper()->Node:
 	var canvas_layer = CanvasLayer.new()
 	canvas_layer.name = "GDPTSceneHelper"
