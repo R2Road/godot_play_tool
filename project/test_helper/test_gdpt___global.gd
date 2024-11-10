@@ -46,3 +46,4 @@ func _ready():
 	
 	#
 	root.add_child( GDPT.helper_code_scene.instantiate() )
+	root.add_child( GDPT.helper_log_scene.instantiate() )

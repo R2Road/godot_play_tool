@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckhm8mux0nwj5"]
+
+[ext_resource type="Script" path="res://addons/godot_play_tool/helper/helper_log.gd" id="1_ccbqb"]
+
+[node name="helper_log" type="MarginContainer"]
+texture_repeat = 1
+offset_right = 349.0
+offset_bottom = 405.0
+script = ExtResource("1_ccbqb")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.165656, 0.165656, 0.165656, 0.784314)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/normal_font_size = 12
+text = "Test"
