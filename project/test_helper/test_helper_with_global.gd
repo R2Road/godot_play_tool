@@ -32,17 +32,17 @@ func _ready():
 	add_child( root )
 	
 	#
-	root.add_child( GDPT.helper_0_0.instantiate() )
-	root.add_child( GDPT.helper_circle.instantiate() )
-	root.add_child( GDPT.helper_drag.instantiate() )
-	root.add_child( GDPT.helper_line.instantiate() )
-	root.add_child( GDPT.helper_move2center.instantiate() )
-	root.add_child( GDPT.helper_point.instantiate() )
-	root.add_child( GDPT.helper_rect.instantiate() )
-	root.add_child( GDPT.helper_reticle.instantiate() )
+	root.add_child( GDPT.helper_0_0_scene.instantiate() )
+	root.add_child( GDPT.helper_circle_scene.instantiate() )
+	root.add_child( GDPT.helper_drag_scene.instantiate() )
+	root.add_child( GDPT.helper_line_scene.instantiate() )
+	root.add_child( GDPT.helper_move2center_scene.instantiate() )
+	root.add_child( GDPT.helper_point_scene.instantiate() )
+	root.add_child( GDPT.helper_rect_scene.instantiate() )
+	root.add_child( GDPT.helper_reticle_scene.instantiate() )
 	
 	#
-	root.add_child( GDPT.helper_hslider.instantiate() )
+	root.add_child( GDPT.helper_hslider_scene.instantiate() )
 	
 	#
-	root.add_child( GDPT.helper_code.instantiate() )
+	root.add_child( GDPT.helper_code_scene.instantiate() )
