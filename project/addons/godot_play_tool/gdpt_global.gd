@@ -23,7 +23,7 @@ var helper_0_0_scene = preload( "res://addons/godot_play_tool/helper/helper_0_0.
 # U.I
 var helper_hslider_scene = preload( "res://addons/godot_play_tool/helper/helper_hslider.tscn" )
 
-# Edit
+# Pragma
 var helper_code_scene = preload( "res://addons/godot_play_tool/helper/helper_code.tscn" )
 
 
