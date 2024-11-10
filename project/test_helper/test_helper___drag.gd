@@ -1,4 +1,4 @@
-class_name test_helper_drag extends GDPTScene
+class_name test_helper___drag extends GDPTScene
 
 
 

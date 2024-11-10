@@ -1,4 +1,4 @@
-class_name test_helper_move2center_with_viewport extends GDPTScene
+class_name test_helper___move2center_with_viewport extends GDPTScene
 
 
 
