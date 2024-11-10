@@ -1,4 +1,4 @@
-class_name test_helper_with_global extends GDPTScene
+class_name test_gdpt___global extends GDPTScene
 
 
 

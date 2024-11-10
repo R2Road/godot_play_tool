@@ -1,4 +1,4 @@
-class_name test_helper_debug_print extends GDPTScene
+class_name test_gdpt___debug_print extends GDPTScene
 
 
 
