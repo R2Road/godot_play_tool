@@ -4,7 +4,7 @@ class_name test_gdpt___debug_print extends GDPTScene
 
 ### GDPT Override ################################################
 static func scene_name()->String:
-	return "Debug Print"
+	return "GDPT : Debug Print"
 
 
 static func scene_path()->String:
