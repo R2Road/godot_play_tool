@@ -1,10 +1,10 @@
-class_name test_helper___log extends GDPTScene
+class_name test_helper___output extends GDPTScene
 
 
 
 ### GDPT Override ################################################
 static func scene_name()->String:
-	return "Helper : Log"
+	return "Helper : Output"
 
 
 static func scene_path()->String:
@@ -26,16 +26,16 @@ func _ready():
 	#
 	#
 	#
-	$helper_log.add_normal( "abc" )
-	$helper_log.add_normal( "def" )
-	$helper_log.add_normal( "ghi" )
+	$helper_output.add_normal( "abc" )
+	$helper_output.add_normal( "def" )
+	$helper_output.add_normal( "ghi" )
 
 
 
 ### Interface ####################################################
 func do()->void:
-	$helper_log.add_normal( "do" )
+	$helper_output.add_normal( "do" )
 
 
 func clamp_output()->void:
-	$helper_log.clamp_output()
+	$helper_output.clamp_output()

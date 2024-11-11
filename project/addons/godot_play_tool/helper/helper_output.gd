@@ -1,4 +1,4 @@
-class_name helper_log extends MarginContainer
+class_name helper_output extends MarginContainer
 
 
 

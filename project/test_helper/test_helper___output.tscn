@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dawyhgsfid8iq"]
+
+[ext_resource type="Script" path="res://test_helper/test_helper___output.gd" id="1_kamgl"]
+[ext_resource type="PackedScene" uid="uid://ckhm8mux0nwj5" path="res://addons/godot_play_tool/helper/helper_output.tscn" id="2_o0cdr"]
+
+[node name="test_helper___output" type="Node2D"]
+script = ExtResource("1_kamgl")
+
+[node name="helper_output" parent="." instance=ExtResource("2_o0cdr")]
+offset_left = 803.0
+offset_right = 1152.0
