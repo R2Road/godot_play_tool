@@ -20,6 +20,7 @@ func _ready():
 	pam.add_split()
 	pam.add_lf()
 	pam.add_action( "do", Key.KEY_1, do )
+	pam.add_action( "clamp", Key.KEY_2, clamp )
 	build_summary( eSceneType.TEST )
 	
 	#
@@ -34,3 +35,7 @@ func _ready():
 ### Interface ####################################################
 func do()->void:
 	$helper_log.add_normal( "do" )
+
+
+func clamp_output()->void:
+	$helper_log.clamp_output()
