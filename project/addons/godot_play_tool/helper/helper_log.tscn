@@ -13,14 +13,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 color = Color(0.165656, 0.165656, 0.165656, 0.784314)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/default_color = Color(0, 1, 0, 1)
-theme_override_font_sizes/normal_font_size = 12
-text = "Test"
-
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 2
 follow_focus = true
@@ -30,3 +22,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 12
