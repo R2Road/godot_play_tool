@@ -26,6 +26,7 @@ func _ready()->void:
 func add_normal( message : String )->void:
 	var l = label.duplicate()
 	l.text = message
+	l.visible = true
 	vbox_container.add_child( l )
 	
 	clamp_output()
