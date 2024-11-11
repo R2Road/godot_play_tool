@@ -18,6 +18,8 @@ func _ready():
 	pam.add_split()
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_split()
+	pam.add_lf()
+	pam.add_action( "do", Key.KEY_1, do )
 	build_summary( eSceneType.TEST )
 	
 	#
@@ -26,3 +28,9 @@ func _ready():
 	$helper_log.add_normal( "abc" )
 	$helper_log.add_normal( "def" )
 	$helper_log.add_normal( "ghi" )
+
+
+
+### Interface ####################################################
+func do()->void:
+	$helper_log.add_normal( "do" )
