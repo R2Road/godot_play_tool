@@ -27,6 +27,9 @@ var helper_hslider_scene = preload( "res://addons/godot_play_tool/helper/helper_
 var helper_code_scene = preload( "res://addons/godot_play_tool/helper/helper_code.tscn" )
 var helper_output_scene = preload( "res://addons/godot_play_tool/helper/helper_output.tscn" )
 
+# Tool
+var helper_controller_script = preload( "res://addons/godot_play_tool/helper/helper_controller.gd" )
+
 
 
 ### Override #####################################################
