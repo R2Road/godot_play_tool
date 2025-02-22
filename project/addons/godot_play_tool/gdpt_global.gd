@@ -20,6 +20,9 @@ var helper_rect_scene = preload( "res://addons/godot_play_tool/helper/helper_rec
 var helper_reticle_scene = preload( "res://addons/godot_play_tool/helper/helper_reticle.tscn" )
 var helper_0_0_scene = preload( "res://addons/godot_play_tool/helper/helper_0_0.tscn" )
 
+# Input
+var helper_input_packed_scene = preload( "res://addons/godot_play_tool/helper/helper_input.tscn" )
+
 # U.I
 var helper_hslider_scene = preload( "res://addons/godot_play_tool/helper/helper_hslider.tscn" )
 
