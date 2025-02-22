@@ -18,7 +18,7 @@ class KeyInfo extends RefCounted:
 	var action : Callable
 	
 	var target_state : eState = eState.NONE
-	var state : eState = eState.NONE
+	var current_state : eState = eState.NONE
 	var stack : int = 0
 	
 	
@@ -29,7 +29,7 @@ class KeyInfo extends RefCounted:
 		return ret
 	
 	func update()->void:
-		match state:
+		match current_state:
 			eState.PUSH:
 				if 1 == stack:
 					change_state( eState.PRESSED )
@@ -42,7 +42,7 @@ class KeyInfo extends RefCounted:
 					stack += 1
 	
 	func press()->void:
-		match state:
+		match current_state:
 			eState.NONE:
 				change_state( eState.PUSH )
 			eState.RELEASE:
@@ -52,17 +52,17 @@ class KeyInfo extends RefCounted:
 		change_state( eState.RELEASE )
 	
 	func change_state( _state : eState )->void:
-		state = _state
+		current_state = _state
 		stack = 0
 		
 		# for test
-		#print( str( state ) )
+		#print( str( current_state ) )
 	
 	func get_state()->eState:
-		return state
+		return current_state
 	
 	func do()->void:
-		if target_state == state:
+		if target_state == current_state:
 			action.call()
 
 
