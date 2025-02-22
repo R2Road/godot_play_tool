@@ -1,4 +1,4 @@
-class_name helper_output extends MarginContainer
+class_name GDPTHelper_Output extends MarginContainer
 
 
 
