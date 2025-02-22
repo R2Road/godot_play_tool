@@ -40,6 +40,11 @@ func clamp_output()->void:
 			vbox_container.remove_child( vbox_container.get_child( 0 ) )
 
 
+func clear()->void:
+	while 0 < vbox_container.get_child_count():
+		vbox_container.remove_child( vbox_container.get_children()[0] )
+
+
 
 ### Signal : Receiver ############################################
 func _on_scroll_bar_changed()->void:

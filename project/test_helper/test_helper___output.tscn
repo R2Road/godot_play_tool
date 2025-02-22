@@ -9,3 +9,4 @@ script = ExtResource("1_kamgl")
 [node name="helper_output" parent="." instance=ExtResource("2_o0cdr")]
 offset_left = 803.0
 offset_right = 1152.0
+allowed_line_count = 50

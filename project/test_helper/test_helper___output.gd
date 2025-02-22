@@ -19,8 +19,8 @@ func _ready():
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_split()
 	pam.add_lf()
-	pam.add_action( "do", Key.KEY_1, do )
-	pam.add_action( "clamp", Key.KEY_2, clamp )
+	pam.add_action( "add", Key.KEY_1, do_add )
+	pam.add_action( "clear", Key.KEY_2, do_clear )
 	build_summary( eSceneType.TEST )
 	
 	#
@@ -33,9 +33,9 @@ func _ready():
 
 
 ### Interface ####################################################
-func do()->void:
+func do_add()->void:
 	$helper_output.add_normal( "do" )
 
 
-func clamp_output()->void:
-	$helper_output.clamp_output()
+func do_clear()->void:
+	$helper_output.clear()
