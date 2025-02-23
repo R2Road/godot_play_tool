@@ -1,4 +1,4 @@
-class_name helper_code extends CodeEdit
+class_name GDPTHelper_Code extends CodeEdit
 
 
 
