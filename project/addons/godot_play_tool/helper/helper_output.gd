@@ -31,6 +31,15 @@ func add_normal( message : String )->void:
 	
 	clamp_output()
 
+func add_color( _message : String, _color : Color )->void:
+	var l = label.duplicate()
+	l.text = _message
+	l.visible = true
+	l.set( "theme_override_colors/font_color", _color )
+	vbox_container.add_child( l )
+	
+	clamp_output()
+
 
 func clamp_output()->void:
 	var gap : int = vbox_container.get_child_count() - allowed_line_count

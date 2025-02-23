@@ -29,12 +29,16 @@ func _ready():
 	$helper_output.add_normal( "abc" )
 	$helper_output.add_normal( "def" )
 	$helper_output.add_normal( "ghi" )
+	$helper_output.add_color( "ghi", Color.RED )
+	$helper_output.add_color( "def", Color.AQUAMARINE )
+	$helper_output.add_color( "ghi", Color.BLUE )
 
 
 
 ### Interface ####################################################
 func do_add()->void:
 	$helper_output.add_normal( "do" )
+	$helper_output.add_color( "do", Color.RED )
 
 
 func do_clear()->void:
