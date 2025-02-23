@@ -5,6 +5,8 @@
 [node name="helper_code" type="CodeEdit"]
 offset_right = 468.0
 offset_bottom = 360.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 12
 gutters_draw_line_numbers = true
 script = ExtResource("1_k6oce")
 
