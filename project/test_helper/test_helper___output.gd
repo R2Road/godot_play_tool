@@ -42,6 +42,7 @@ func _ready():
 
 ### Interface ####################################################
 func do_add()->void:
+	helper_output.add_lf()
 	helper_output.add_normal( "do" )
 	helper_output.add_color( "do", Color.RED )
 

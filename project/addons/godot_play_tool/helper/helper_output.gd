@@ -23,6 +23,14 @@ func _ready()->void:
 
 
 ### Interface ####################################################
+func add_lf()->void:
+	var l = label.duplicate()
+	l.text = ""
+	l.visible = true
+	vbox_container.add_child( l )
+	
+	clamp_output()
+
 func add_normal( message : String )->void:
 	var l = label.duplicate()
 	l.text = message
