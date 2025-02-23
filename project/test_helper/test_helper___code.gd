@@ -12,6 +12,11 @@ static func scene_path()->String:
 
 
 
+#### Export ######################################################
+@export var helper_code : GDPTHelper_Code
+
+
+
 ### Override #####################################################
 func _ready():
 	pam.set_name( scene_name() )
@@ -20,4 +25,4 @@ func _ready():
 	pam.add_split()
 	build_summary( eSceneType.TEST )
 	
-	$helper_code_1.show_code( scene_path().replace( ".tscn", ".gd" ), 6, 7 )
+	helper_code.show_code( scene_path().replace( ".tscn", ".gd" ), 6, 7 )
