@@ -3,8 +3,9 @@
 [ext_resource type="Script" path="res://test_helper/test_helper___output.gd" id="1_kamgl"]
 [ext_resource type="PackedScene" uid="uid://ckhm8mux0nwj5" path="res://addons/godot_play_tool/helper/helper_output.tscn" id="2_o0cdr"]
 
-[node name="test_helper___output" type="Node2D"]
+[node name="test_helper___output" type="Node2D" node_paths=PackedStringArray("helper_output")]
 script = ExtResource("1_kamgl")
+helper_output = NodePath("helper_output")
 
 [node name="helper_output" parent="." instance=ExtResource("2_o0cdr")]
 offset_left = 803.0

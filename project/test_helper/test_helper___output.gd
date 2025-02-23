@@ -12,6 +12,11 @@ static func scene_path()->String:
 
 
 
+#### Export ######################################################
+@export var helper_output : GDPTHelper_Output
+
+
+
 ### Override #####################################################
 func _ready():
 	pam.set_name( scene_name() )
@@ -26,20 +31,20 @@ func _ready():
 	#
 	#
 	#
-	$helper_output.add_normal( "abc" )
-	$helper_output.add_normal( "def" )
-	$helper_output.add_normal( "ghi" )
-	$helper_output.add_color( "ghi", Color.RED )
-	$helper_output.add_color( "def", Color.AQUAMARINE )
-	$helper_output.add_color( "ghi", Color.BLUE )
+	helper_output.add_normal( "abc" )
+	helper_output.add_normal( "def" )
+	helper_output.add_normal( "ghi" )
+	helper_output.add_color( "ghi", Color.RED )
+	helper_output.add_color( "def", Color.AQUAMARINE )
+	helper_output.add_color( "ghi", Color.BLUE )
 
 
 
 ### Interface ####################################################
 func do_add()->void:
-	$helper_output.add_normal( "do" )
-	$helper_output.add_color( "do", Color.RED )
+	helper_output.add_normal( "do" )
+	helper_output.add_color( "do", Color.RED )
 
 
 func do_clear()->void:
-	$helper_output.clear()
+	helper_output.clear()
