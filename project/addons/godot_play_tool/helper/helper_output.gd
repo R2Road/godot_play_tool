@@ -23,7 +23,7 @@ func _ready()->void:
 
 
 ### Interface ####################################################
-func add_lf()->void:
+func lf()->void:
 	var l = label.duplicate()
 	l.text = ""
 	l.visible = true
@@ -31,7 +31,7 @@ func add_lf()->void:
 	
 	clamp_output()
 
-func add_normal( message : String )->void:
+func print( message : String )->void:
 	var l = label.duplicate()
 	l.text = message
 	l.visible = true
@@ -39,7 +39,7 @@ func add_normal( message : String )->void:
 	
 	clamp_output()
 
-func add_color( _message : String, _color : Color )->void:
+func print_color( _message : String, _color : Color )->void:
 	var l = label.duplicate()
 	l.text = _message
 	l.visible = true
