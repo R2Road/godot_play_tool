@@ -24,8 +24,10 @@ func _ready():
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_split()
 	pam.add_lf()
-	pam.add_action( "add", Key.KEY_1, do_add )
-	pam.add_action( "clear", Key.KEY_2, do_clear )
+	pam.add_action( "print", Key.KEY_1, do_print )
+	pam.add_action( "print color", Key.KEY_2, do_print_color )
+	pam.add_action( "line feed", Key.KEY_3, do_lf )
+	pam.add_action( "clear", Key.KEY_SPACE, do_clear )
 	build_summary( eSceneType.TEST )
 	
 	#
@@ -41,11 +43,14 @@ func _ready():
 
 
 ### Interface ####################################################
-func do_add()->void:
-	helper_output.lf()
+func do_print()->void:
 	helper_output.print( "do" )
+
+func do_print_color()->void:
 	helper_output.print_color( "do", Color.RED )
 
+func do_lf()->void:
+	helper_output.lf()
 
 func do_clear()->void:
 	helper_output.clear()
