@@ -44,12 +44,12 @@ func _enter_tree()->void:
 	print( "GDPT : Enter Tree" )
 	
 	var cf = ConfigFile.new()
-	cf.load( "res://addons/godot_play_tool/plugin.cfg" )
-	version = (
-		cf.get_value( "plugin", "alias" )
-		+ " : v"
-		+ cf.get_value( "plugin", "version" )
-	)
+	if Error.OK == cf.load( "res://addons/godot_play_tool/plugin.cfg" ):
+		version = (
+			cf.get_value( "plugin", "alias" )
+			+ " : v"
+			+ cf.get_value( "plugin", "version" )
+		)
 
 
 func _exit_tree()->void:
