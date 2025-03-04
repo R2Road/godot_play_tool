@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://x3klx4p7o4vj"]
 
-[ext_resource type="Script" path="res://test_helper/test_helper___code.gd" id="1_p2xjl"]
+[ext_resource type="Script" uid="uid://ds1gbkylln5fj" path="res://test_helper/test_helper___code.gd" id="1_p2xjl"]
 [ext_resource type="PackedScene" uid="uid://cpuuwp2254hm2" path="res://addons/godot_play_tool/helper/helper_code.tscn" id="2_weisi"]
 
 [node name="test_helper___code" type="Node2D" node_paths=PackedStringArray("helper_code")]
