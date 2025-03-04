@@ -19,7 +19,7 @@ func _ready():
 	#
 	
 	# 0, 0
-	add_child( GDPT.helper_0_0.instantiate() )
+	add_child( GDPT.helper_0_0_scene.instantiate() )
 	
 	# Test Interface
 	add_child( GDPT.build_scene_helper() )
