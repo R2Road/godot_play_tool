@@ -32,18 +32,18 @@ func _ready():
 	add_child( root )
 	
 	#
-	root.add_child( GDPT.helper_0_0_scene.instantiate() )
-	root.add_child( GDPT.helper_circle_scene.instantiate() )
-	root.add_child( GDPT.helper_drag_scene.instantiate() )
-	root.add_child( GDPT.helper_line_scene.instantiate() )
-	root.add_child( GDPT.helper_move2center_scene.instantiate() )
-	root.add_child( GDPT.helper_point_scene.instantiate() )
-	root.add_child( GDPT.helper_rect_scene.instantiate() )
-	root.add_child( GDPT.helper_reticle_scene.instantiate() )
+	root.add_child( GDPT.helper_0_0_packed_scene.instantiate() )
+	root.add_child( GDPT.helper_circle_packed_scene.instantiate() )
+	root.add_child( GDPT.helper_drag_packed_scene.instantiate() )
+	root.add_child( GDPT.helper_line_packed_scene.instantiate() )
+	root.add_child( GDPT.helper_move2center_packed_scene.instantiate() )
+	root.add_child( GDPT.helper_point_packed_scene.instantiate() )
+	root.add_child( GDPT.helper_rect_packed_scene.instantiate() )
+	root.add_child( GDPT.helper_reticle_packed_scene.instantiate() )
 	
 	#
-	root.add_child( GDPT.helper_hslider_scene.instantiate() )
+	root.add_child( GDPT.helper_hslider_packed_scene.instantiate() )
 	
 	#
-	root.add_child( GDPT.helper_code_scene.instantiate() )
-	root.add_child( GDPT.helper_output_scene.instantiate() )
+	root.add_child( GDPT.helper_code_packed_scene.instantiate() )
+	root.add_child( GDPT.helper_output_packed_scene.instantiate() )

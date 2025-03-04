@@ -8,30 +8,30 @@ var version : String
 var on_debug = true
 var on_assert = true
 
-const scene_helper = preload( "res://addons/godot_play_tool/scene/gdpt_scene_helper.gd" )
+const scene_helper_packed_scrpit = preload( "res://addons/godot_play_tool/scene/gdpt_scene_helper.gd" )
 
 # 
-const helper_circle_scene = preload( "res://addons/godot_play_tool/helper/helper_circle.tscn" )
-const helper_drag_scene = preload( "res://addons/godot_play_tool/helper/helper_drag.tscn" )
-const helper_line_scene = preload( "res://addons/godot_play_tool/helper/helper_line.tscn" )
-const helper_move2center_scene = preload( "res://addons/godot_play_tool/helper/helper_move2center.tscn" )
-const helper_point_scene = preload( "res://addons/godot_play_tool/helper/helper_point.tscn" )
-const helper_rect_scene = preload( "res://addons/godot_play_tool/helper/helper_rect.tscn" )
-const helper_reticle_scene = preload( "res://addons/godot_play_tool/helper/helper_reticle.tscn" )
-const helper_0_0_scene = preload( "res://addons/godot_play_tool/helper/helper_0_0.tscn" )
+const helper_circle_packed_scene = preload( "res://addons/godot_play_tool/helper/helper_circle.tscn" )
+const helper_drag_packed_scene = preload( "res://addons/godot_play_tool/helper/helper_drag.tscn" )
+const helper_line_packed_scene = preload( "res://addons/godot_play_tool/helper/helper_line.tscn" )
+const helper_move2center_packed_scene = preload( "res://addons/godot_play_tool/helper/helper_move2center.tscn" )
+const helper_point_packed_scene = preload( "res://addons/godot_play_tool/helper/helper_point.tscn" )
+const helper_rect_packed_scene = preload( "res://addons/godot_play_tool/helper/helper_rect.tscn" )
+const helper_reticle_packed_scene = preload( "res://addons/godot_play_tool/helper/helper_reticle.tscn" )
+const helper_0_0_packed_scene = preload( "res://addons/godot_play_tool/helper/helper_0_0.tscn" )
 
 # Input
 const helper_input_packed_scene = preload( "res://addons/godot_play_tool/helper/helper_input.tscn" )
 
 # U.I
-const helper_hslider_scene = preload( "res://addons/godot_play_tool/helper/helper_hslider.tscn" )
+const helper_hslider_packed_scene = preload( "res://addons/godot_play_tool/helper/helper_hslider.tscn" )
 
 # Pragma
-const helper_code_scene = preload( "res://addons/godot_play_tool/helper/helper_code.tscn" )
-const helper_output_scene = preload( "res://addons/godot_play_tool/helper/helper_output.tscn" )
+const helper_code_packed_scene = preload( "res://addons/godot_play_tool/helper/helper_code.tscn" )
+const helper_output_packed_scene = preload( "res://addons/godot_play_tool/helper/helper_output.tscn" )
 
 # Tool
-const helper_controller_script = preload( "res://addons/godot_play_tool/helper/helper_controller.gd" )
+const helper_controller_packed_script = preload( "res://addons/godot_play_tool/helper/helper_controller.gd" )
 
 
 
@@ -62,7 +62,7 @@ func _exit_tree()->void:
 func build_scene_helper()->Node:
 	var canvas_layer = CanvasLayer.new()
 	canvas_layer.name = "GDPTSceneHelper"
-	canvas_layer.set_script( GDPT.scene_helper )
+	canvas_layer.set_script( GDPT.scene_helper_packed_scrpit )
 	return canvas_layer
 
 
