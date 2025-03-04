@@ -32,18 +32,21 @@ func _ready():
 	add_child( root )
 	
 	#
-	root.add_child( GDPT.helper_0_0_packed_scene.instantiate() )
-	root.add_child( GDPT.helper_circle_packed_scene.instantiate() )
-	root.add_child( GDPT.helper_drag_packed_scene.instantiate() )
-	root.add_child( GDPT.helper_line_packed_scene.instantiate() )
-	root.add_child( GDPT.helper_move2center_packed_scene.instantiate() )
-	root.add_child( GDPT.helper_point_packed_scene.instantiate() )
-	root.add_child( GDPT.helper_rect_packed_scene.instantiate() )
-	root.add_child( GDPT.helper_reticle_packed_scene.instantiate() )
-	
+	# Load Packed Scene
 	#
-	root.add_child( GDPT.helper_hslider_packed_scene.instantiate() )
+	var constant_map : Dictionary = GDPT.get_script().get_script_constant_map().duplicate()
+	var packed_scene_count : int = 0
 	
-	#
-	root.add_child( GDPT.helper_code_packed_scene.instantiate() )
-	root.add_child( GDPT.helper_output_packed_scene.instantiate() )
+	print( "[S] Load : Helper Scenes" )
+	
+	for constant_name : String in constant_map:
+		if -1 == constant_name.find( "packed_scene" ):
+			continue
+		
+		packed_scene_count += 1
+		print( "\t%2d : %s" % [packed_scene_count, constant_name] )
+		
+		var packed_scene = constant_map[constant_name]
+		root.add_child( packed_scene.instantiate() )
+	
+	print( "[E] Load : Helper Scenes" )
