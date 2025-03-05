@@ -15,6 +15,11 @@ func _init()->void:
 
 ### Interface ####################################################
 func set_volume( _percentage : float ) -> void:
+	update_volume( _percentage )
+	slider.value = _percentage
+
+
+func update_volume( _percentage : float ) -> void:
 	var scale : float = 20
 	var divisor : float = 50
 	
@@ -28,5 +33,5 @@ func set_volume( _percentage : float ) -> void:
 
 ### Signal : Receiver ############################################
 func _on_helper_hslider_value_changed( _percentage : float ) -> void:
-	set_volume( _percentage )
+	update_volume( _percentage )
 	

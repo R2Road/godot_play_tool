@@ -19,3 +19,8 @@ func _ready():
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_split()
 	build_summary( eSceneType.TEST )
+	
+	#
+	#
+	#
+	$CanvasLayer/HelperVolume.set_volume( 30 )
