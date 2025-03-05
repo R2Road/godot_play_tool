@@ -1,11 +1,92 @@
 [gd_scene load_steps=3 format=3 uid="uid://gvh05ct73ntt"]
 
 [ext_resource type="Script" uid="uid://d35mt46o4kus" path="res://test_helper/test_helper___reticle.gd" id="1_gtt6u"]
-[ext_resource type="PackedScene" uid="uid://dsuaumbxcknhr" path="res://addons/godot_play_tool/helper/helper_0_0.tscn" id="2_1a6t4"]
+[ext_resource type="PackedScene" uid="uid://8pengjsakrxj" path="res://addons/godot_play_tool/helper/helper_reticle.tscn" id="2_gtt6u"]
 
-[node name="test_helper___reticle" type="Node2D"]
+[node name="test_helper___reticle" type="Node2D" node_paths=PackedStringArray("test_helper", "length_slider", "line_width_slider", "color_h_picker", "color_v_picker")]
 script = ExtResource("1_gtt6u")
+test_helper = NodePath("helper_reticle")
+length_slider = NodePath("CanvasLayer/GridContainer/Length/Radius")
+line_width_slider = NodePath("CanvasLayer/GridContainer/Line Width/Radius")
+color_h_picker = NodePath("CanvasLayer/GridContainer/ColorH/ColorPicker")
+color_v_picker = NodePath("CanvasLayer/GridContainer/ColorV/ColorPicker")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="helper_0_0" parent="." instance=ExtResource("2_1a6t4")]
+[node name="helper_reticle" parent="." instance=ExtResource("2_gtt6u")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GridContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -256.0
+offset_bottom = 168.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+
+[node name="Length" type="HBoxContainer" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/GridContainer/Length"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Length"
+
+[node name="Radius" type="HSlider" parent="CanvasLayer/GridContainer/Length"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="Line Width" type="HBoxContainer" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/GridContainer/Line Width"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Line Width"
+
+[node name="Radius" type="HSlider" parent="CanvasLayer/GridContainer/Line Width"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 50.0
+
+[node name="ColorH" type="HBoxContainer" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/GridContainer/ColorH"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Line Width"
+
+[node name="ColorPicker" type="ColorPicker" parent="CanvasLayer/GridContainer/ColorH"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+edit_alpha = false
+picker_shape = 4
+sampler_visible = false
+color_modes_visible = false
+hex_visible = false
+presets_visible = false
+
+[node name="ColorV" type="HBoxContainer" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/GridContainer/ColorV"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Line Width"
+
+[node name="ColorPicker" type="ColorPicker" parent="CanvasLayer/GridContainer/ColorV"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+edit_alpha = false
+picker_shape = 4
+sampler_visible = false
+color_modes_visible = false
+hex_visible = false
+presets_visible = false
