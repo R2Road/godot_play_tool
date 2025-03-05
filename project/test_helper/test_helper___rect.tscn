@@ -1,0 +1,128 @@
+[gd_scene load_steps=4 format=3 uid="uid://fuvx7mhfn3lj"]
+
+[ext_resource type="Script" uid="uid://cq10spotoa3dl" path="res://test_helper/test_helper___rect.gd" id="1_2r051"]
+[ext_resource type="PackedScene" uid="uid://cngaojh6cbfw5" path="res://addons/godot_play_tool/helper/helper_rect.tscn" id="2_2r051"]
+[ext_resource type="Script" uid="uid://dvpk1we63lyab" path="res://addons/godot_play_tool/helper/helper_point.gd" id="3_my1jy"]
+
+[node name="test_helper___rect" type="Node2D" node_paths=PackedStringArray("test_helper", "start_x_slider", "start_y_slider", "size_w_slider", "size_h_slider", "line_width_slider", "fill_checkbox", "color_picker")]
+script = ExtResource("1_2r051")
+test_helper = NodePath("helper_rect")
+start_x_slider = NodePath("CanvasLayer/GridContainer/Start/X")
+start_y_slider = NodePath("CanvasLayer/GridContainer/Start/Y")
+size_w_slider = NodePath("CanvasLayer/GridContainer/Size/W")
+size_h_slider = NodePath("CanvasLayer/GridContainer/Size/H")
+line_width_slider = NodePath("CanvasLayer/GridContainer/LineWidth/LineWidth")
+fill_checkbox = NodePath("CanvasLayer/GridContainer/Fill/Fill")
+color_picker = NodePath("CanvasLayer/GridContainer/Color/ColorPicker")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="helper_rect" parent="." instance=ExtResource("2_2r051")]
+z_index = 4096
+rect = Rect2(0, 0, 50, 50)
+
+[node name="helper_point" type="Node2D" parent="helper_rect"]
+z_index = 4096
+script = ExtResource("3_my1jy")
+color = Color(1, 0, 0, 1)
+metadata/_custom_type_script = "uid://dvpk1we63lyab"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GridContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -256.0
+offset_bottom = 168.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+
+[node name="Start" type="HBoxContainer" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/GridContainer/Start"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Position"
+
+[node name="X" type="HSlider" parent="CanvasLayer/GridContainer/Start"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 4
+min_value = -500.0
+max_value = 500.0
+
+[node name="Y" type="HSlider" parent="CanvasLayer/GridContainer/Start"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 4
+min_value = -300.0
+max_value = 300.0
+
+[node name="Size" type="HBoxContainer" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/GridContainer/Size"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Size"
+
+[node name="W" type="HSlider" parent="CanvasLayer/GridContainer/Size"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 4
+min_value = -300.0
+max_value = 300.0
+value = 200.0
+
+[node name="H" type="HSlider" parent="CanvasLayer/GridContainer/Size"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 4
+min_value = -300.0
+max_value = 300.0
+
+[node name="LineWidth" type="HBoxContainer" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/GridContainer/LineWidth"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Line Width"
+
+[node name="LineWidth" type="HSlider" parent="CanvasLayer/GridContainer/LineWidth"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 500.0
+
+[node name="Fill" type="HBoxContainer" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/GridContainer/Fill"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Fill"
+
+[node name="Fill" type="CheckBox" parent="CanvasLayer/GridContainer/Fill"]
+layout_mode = 2
+
+[node name="Color" type="HBoxContainer" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/GridContainer/Color"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Color"
+
+[node name="ColorPicker" type="ColorPicker" parent="CanvasLayer/GridContainer/Color"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+edit_alpha = false
+picker_shape = 4
+sampler_visible = false
+color_modes_visible = false
+hex_visible = false
+presets_visible = false
