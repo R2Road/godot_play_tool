@@ -1,18 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://k5vx7qt2cevj"]
+[gd_scene load_steps=2 format=3 uid="uid://k5vx7qt2cevj"]
 
 [ext_resource type="Script" uid="uid://dth47tdbqs1fx" path="res://test_helper/test_helper_root.gd" id="1_8q1go"]
-[ext_resource type="PackedScene" uid="uid://drl1ho8d50ug8" path="res://addons/godot_play_tool/helper/helper_hslider.tscn" id="9_7whqw"]
 
 [node name="TestHelperRoot" type="Node2D"]
 script = ExtResource("1_8q1go")
-
-[node name="helper_hslider" parent="." instance=ExtResource("9_7whqw")]
-offset_left = 935.0
-offset_top = 610.0
-offset_right = 1135.0
-offset_bottom = 626.0
-
-[node name="Title" parent="helper_hslider" index="0"]
-text = "helper_hslider"
-
-[editable path="helper_hslider"]
