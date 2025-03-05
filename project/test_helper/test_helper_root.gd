@@ -28,6 +28,4 @@ func _ready():
 	pam.add_lf()
 	pam.add_mover( test_gdpt___input.scene_name(),			Key.KEY_D, test_gdpt___input.scene_path() )
 	pam.add_lf()
-	pam.add_mover( test_gdpt___debug_print.scene_name(),	Key.KEY_Z, test_gdpt___debug_print.scene_path() )
-	pam.add_mover( test_gdpt___global.scene_name(),			Key.KEY_X, test_gdpt___global.scene_path() )
 	build_summary( eSceneType.TEST )
