@@ -24,6 +24,7 @@ func _ready():
 	pam.add_lf2()
 	pam.add_root( test_action_root.scene_name(),	Key.KEY_A,	test_action_root.scene_path() )
 	pam.add_root( test_helper_root.scene_name(),	Key.KEY_S,	test_helper_root.scene_path() )
+	pam.add_root( test_gdpt_root.scene_name(),		Key.KEY_D,	test_gdpt_root.scene_path() )
 	pam.add_lf()
 	pam.add_split()
 	build_summary( eSceneType.ROOT )

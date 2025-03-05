@@ -33,6 +33,7 @@ enabled=PackedStringArray("res://addons/godot_play_tool/plugin.cfg")
 
 folder_colors={
 "res://test_action/": "purple",
+"res://test_gdpt/": "green",
 "res://test_helper/": "red"
 }
 
