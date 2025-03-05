@@ -18,7 +18,22 @@ func _ready():
 	pam.add_split()
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_lf()
-	pam.add_action( "GDPT Debug Flag ON", 	Key.KEY_1, 		func(): GDPT.on_debug = true )
-	pam.add_action( "GDPT Debug Flag OFF", 	Key.KEY_2, 		func(): GDPT.on_debug = false )
+	pam.add_action( "GDPT Debug Flag Toggle", 	Key.KEY_1,
+		func(): 
+			GDPT.on_debug = ( not GDPT.on_debug )
+			update_label()
+	)
 	pam.add_action( "Debug Print", 			Key.KEY_SPACE, 	func(): GDPT._debug_print( func()->String: return "Test Message" ) )
 	build_summary( eSceneType.TEST )
+	
+	#
+	#
+	#
+	update_label()
+
+
+func update_label()->void:
+	if GDPT.on_debug:
+		$CanvasLayer/Label.text = "ON"
+	else:
+		$CanvasLayer/Label.text = "OFF"
