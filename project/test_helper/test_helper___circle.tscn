@@ -10,7 +10,7 @@ offset_x_slider = NodePath("CanvasLayer/GridContainer/Offset/OffsetX")
 offset_y_slider = NodePath("CanvasLayer/GridContainer/Offset/OffsetY")
 radius_slider = NodePath("CanvasLayer/GridContainer/Radius/Radius")
 fill_checkbox = NodePath("CanvasLayer/GridContainer/Fill/Fill")
-color_picker = NodePath("CanvasLayer/GridContainer/ColorPicker")
+color_picker = NodePath("CanvasLayer/GridContainer/Color/ColorPicker")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -76,7 +76,15 @@ text = "Fill"
 [node name="Fill" type="CheckBox" parent="CanvasLayer/GridContainer/Fill"]
 layout_mode = 2
 
-[node name="ColorPicker" type="ColorPicker" parent="CanvasLayer/GridContainer"]
+[node name="Color" type="HBoxContainer" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/GridContainer/Color"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Color"
+
+[node name="ColorPicker" type="ColorPicker" parent="CanvasLayer/GridContainer/Color"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 edit_alpha = false
