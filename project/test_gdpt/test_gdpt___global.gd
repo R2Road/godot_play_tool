@@ -4,7 +4,7 @@ class_name test_gdpt___global extends GDPTScene
 
 ### GDPT Override ################################################
 static func scene_name()->String:
-	return "GDPT : Global"
+	return "Global : Preloaded Helper Check"
 
 
 static func scene_path()->String:
