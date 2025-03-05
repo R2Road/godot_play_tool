@@ -4,7 +4,7 @@ class_name test_helper___output extends GDPTScene
 
 ### GDPT Override ################################################
 static func scene_name()->String:
-	return "Helper : Output"
+	return "helper_output"
 
 
 static func scene_path()->String:

@@ -4,7 +4,7 @@ class_name test_helper___drag extends GDPTScene
 
 ### GDPT Override ################################################
 static func scene_name()->String:
-	return "Drag"
+	return "helper_drag"
 
 
 static func scene_path()->String:
