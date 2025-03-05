@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://gvh05ct73ntt"]
+
+[ext_resource type="Script" uid="uid://d35mt46o4kus" path="res://test_helper/test_helper___reticle.gd" id="1_gtt6u"]
+[ext_resource type="PackedScene" uid="uid://dsuaumbxcknhr" path="res://addons/godot_play_tool/helper/helper_0_0.tscn" id="2_1a6t4"]
+
+[node name="test_helper___reticle" type="Node2D"]
+script = ExtResource("1_gtt6u")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="helper_0_0" parent="." instance=ExtResource("2_1a6t4")]
