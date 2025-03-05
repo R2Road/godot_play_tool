@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdpp4lylodpy2"]
+
+[ext_resource type="Script" uid="uid://btm7bgoeo5wjp" path="res://addons/godot_play_tool/helper/helper_volume.gd" id="1_027bk"]
+[ext_resource type="PackedScene" uid="uid://drl1ho8d50ug8" path="res://addons/godot_play_tool/helper/helper_hslider.tscn" id="1_28syx"]
+
+[node name="helper_volume" type="Control" node_paths=PackedStringArray("slider")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_027bk")
+slider = NodePath("helper_hslider")
+
+[node name="helper_hslider" parent="." instance=ExtResource("1_28syx")]
+layout_mode = 0
+
+[node name="Title" parent="helper_hslider" index="0"]
+text = "Volume"
+
+[connection signal="value_changed" from="helper_hslider" to="." method="_on_helper_hslider_value_changed"]
+
+[editable path="helper_hslider"]
