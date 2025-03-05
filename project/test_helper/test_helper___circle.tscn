@@ -3,30 +3,85 @@
 [ext_resource type="Script" uid="uid://dd8e87gcfn7al" path="res://test_helper/test_helper___circle.gd" id="1_n8omk"]
 [ext_resource type="PackedScene" uid="uid://gpu5f7fm35o4" path="res://addons/godot_play_tool/helper/helper_circle.tscn" id="2_xu0ni"]
 
-[node name="test_helper___circle" type="Node2D"]
+[node name="test_helper___circle" type="Node2D" node_paths=PackedStringArray("helper_circle", "offset_x_slider", "offset_y_slider", "radius_slider", "fill_checkbox", "color_picker")]
 script = ExtResource("1_n8omk")
+helper_circle = NodePath("helper_circle")
+offset_x_slider = NodePath("CanvasLayer/GridContainer/Offset/OffsetX")
+offset_y_slider = NodePath("CanvasLayer/GridContainer/Offset/OffsetY")
+radius_slider = NodePath("CanvasLayer/GridContainer/Radius/Radius")
+fill_checkbox = NodePath("CanvasLayer/GridContainer/Fill/Fill")
+color_picker = NodePath("CanvasLayer/GridContainer/ColorPicker")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="radius_test" parent="." instance=ExtResource("2_xu0ni")]
-color = Color(4.81308e-06, 0.713634, 0.935856, 1)
+[node name="helper_circle" parent="." instance=ExtResource("2_xu0ni")]
 radius = 100.0
 
-[node name="fill_test" parent="." instance=ExtResource("2_xu0ni")]
-color = Color(1, 0.470588, 0.356863, 1)
-radius = 50.0
-fill = true
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="offset_test_1" parent="." instance=ExtResource("2_xu0ni")]
-offset = Vector2(-400, 0)
-radius = 50.0
-fill = true
+[node name="GridContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -256.0
+offset_bottom = 168.0
+grow_horizontal = 0
+size_flags_horizontal = 8
 
-[node name="offset_test_2" parent="." instance=ExtResource("2_xu0ni")]
-offset = Vector2(400, 200)
-radius = 50.0
+[node name="Offset" type="HBoxContainer" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
 
-[node name="offset_test_3" parent="." instance=ExtResource("2_xu0ni")]
-position = Vector2(198, -283)
-offset = Vector2(200, 100)
-radius = 50.0
+[node name="Label" type="Label" parent="CanvasLayer/GridContainer/Offset"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Offset"
+
+[node name="OffsetX" type="HSlider" parent="CanvasLayer/GridContainer/Offset"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 4
+min_value = -500.0
+max_value = 500.0
+
+[node name="OffsetY" type="HSlider" parent="CanvasLayer/GridContainer/Offset"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 4
+min_value = -500.0
+max_value = 500.0
+
+[node name="Radius" type="HBoxContainer" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/GridContainer/Radius"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Radius"
+
+[node name="Radius" type="HSlider" parent="CanvasLayer/GridContainer/Radius"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 500.0
+
+[node name="Fill" type="HBoxContainer" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/GridContainer/Fill"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Fill"
+
+[node name="Fill" type="CheckBox" parent="CanvasLayer/GridContainer/Fill"]
+layout_mode = 2
+
+[node name="ColorPicker" type="ColorPicker" parent="CanvasLayer/GridContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+edit_alpha = false
+picker_shape = 4
+sampler_visible = false
+color_modes_visible = false
+hex_visible = false
+presets_visible = false
