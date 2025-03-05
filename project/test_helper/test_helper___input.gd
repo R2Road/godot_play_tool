@@ -1,4 +1,4 @@
-class_name test_gdpt___input extends GDPTScene
+class_name test_helper___input extends GDPTScene
 
 
 
