@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvbfv5cjvw3fh"]
+
+[ext_resource type="Script" uid="uid://c24jii16y1tb0" path="res://test_helper/test_helper___point.gd" id="1_afxpd"]
+[ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://addons/godot_play_tool/helper/helper_point.tscn" id="2_afxpd"]
+
+[node name="test_helper___point" type="Node2D" node_paths=PackedStringArray("test_helper", "color_picker")]
+script = ExtResource("1_afxpd")
+test_helper = NodePath("helper_point")
+color_picker = NodePath("CanvasLayer/GridContainer/ColorPicker")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="helper_point" parent="." instance=ExtResource("2_afxpd")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GridContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -256.0
+offset_bottom = 168.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+
+[node name="ColorPicker" type="ColorPicker" parent="CanvasLayer/GridContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+edit_alpha = false
+picker_shape = 4
+sampler_visible = false
+color_modes_visible = false
+hex_visible = false
+presets_visible = false
