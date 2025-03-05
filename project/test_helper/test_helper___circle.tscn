@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpr42bgmvpnd2"]
+
+[ext_resource type="Script" uid="uid://dd8e87gcfn7al" path="res://test_helper/test_helper___circle.gd" id="1_n8omk"]
+[ext_resource type="PackedScene" uid="uid://gpu5f7fm35o4" path="res://addons/godot_play_tool/helper/helper_circle.tscn" id="2_xu0ni"]
+
+[node name="test_helper___circle" type="Node2D"]
+script = ExtResource("1_n8omk")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="radius_test" parent="." instance=ExtResource("2_xu0ni")]
+color = Color(4.81308e-06, 0.713634, 0.935856, 1)
+radius = 100.0
+
+[node name="fill_test" parent="." instance=ExtResource("2_xu0ni")]
+color = Color(1, 0.470588, 0.356863, 1)
+radius = 50.0
+fill = true
+
+[node name="offset_test_1" parent="." instance=ExtResource("2_xu0ni")]
+offset = Vector2(-400, 0)
+radius = 50.0
+fill = true
+
+[node name="offset_test_2" parent="." instance=ExtResource("2_xu0ni")]
+offset = Vector2(400, 200)
+radius = 50.0
+
+[node name="offset_test_3" parent="." instance=ExtResource("2_xu0ni")]
+position = Vector2(198, -283)
+offset = Vector2(200, 100)
+radius = 50.0
