@@ -36,4 +36,4 @@ func _ready():
 	pam.add_mover( test_helper___output.scene_name(),	Key.KEY_S, test_helper___output.scene_path() )
 	pam.add_mover( test_helper___volume.scene_name(),	Key.KEY_D, test_helper___volume.scene_path() )
 	pam.add_lf()
-	build_summary( eSceneType.TEST )
+	build_summary( eSceneType.ROOT )

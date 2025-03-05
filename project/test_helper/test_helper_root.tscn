@@ -1,42 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://k5vx7qt2cevj"]
+[gd_scene load_steps=3 format=3 uid="uid://k5vx7qt2cevj"]
 
 [ext_resource type="Script" uid="uid://dth47tdbqs1fx" path="res://test_helper/test_helper_root.gd" id="1_8q1go"]
-[ext_resource type="PackedScene" uid="uid://ljh7garocuhe" path="res://addons/godot_play_tool/helper/helper_point.tscn" id="3_i5b61"]
-[ext_resource type="PackedScene" uid="uid://cngaojh6cbfw5" path="res://addons/godot_play_tool/helper/helper_rect.tscn" id="4_q8sn8"]
-[ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="7_ljhnk"]
-[ext_resource type="PackedScene" uid="uid://8pengjsakrxj" path="res://addons/godot_play_tool/helper/helper_reticle.tscn" id="8_oulan"]
 [ext_resource type="PackedScene" uid="uid://drl1ho8d50ug8" path="res://addons/godot_play_tool/helper/helper_hslider.tscn" id="9_7whqw"]
 
 [node name="TestHelperRoot" type="Node2D"]
 script = ExtResource("1_8q1go")
-
-[node name="helper_move2center_test" parent="." instance=ExtResource("3_i5b61")]
-position = Vector2(916, 98)
-metadata/_edit_group_ = true
-
-[node name="helper_rect" parent="helper_move2center_test" instance=ExtResource("4_q8sn8")]
-z_index = 4096
-position = Vector2(61, 61)
-rect = Rect2(-15, -15, 30, 30)
-
-[node name="helper_move2center" parent="helper_move2center_test/helper_rect" instance=ExtResource("7_ljhnk")]
-
-[node name="helper_point" parent="helper_move2center_test/helper_rect" instance=ExtResource("3_i5b61")]
-
-[node name="Label" type="Label" parent="helper_move2center_test/helper_rect"]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Move2Center"
-
-[node name="Label" type="Label" parent="helper_move2center_test"]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Move2Center Test Root"
-
-[node name="helper_reticle" parent="." instance=ExtResource("8_oulan")]
-metadata/_edit_group_ = true
-
-[node name="helper_move2center" parent="helper_reticle" instance=ExtResource("7_ljhnk")]
 
 [node name="helper_hslider" parent="." instance=ExtResource("9_7whqw")]
 offset_left = 935.0
