@@ -13,6 +13,20 @@ func _init()->void:
 
 
 
+### Interface ####################################################
+func set_volume( _percentage : float ) -> void:
+	var scale : float = 20
+	var divisor : float = 50
+	
+	var new_volume : float = scale * ( log( _percentage / divisor ) / log( 10 ) )
+	
+	AudioServer.set_bus_volume_db( 0, new_volume )
+	
+	#print( "Volume : Percentage %f | DB : %f" % [_percentage, new_volume] )
+
+
+
 ### Signal : Receiver ############################################
-func _on_helper_hslider_value_changed( value: float ) -> void:
-	print( str( value ) )
+func _on_helper_hslider_value_changed( _percentage : float ) -> void:
+	set_volume( _percentage )
+	
