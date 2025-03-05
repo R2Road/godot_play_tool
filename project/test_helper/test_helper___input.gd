@@ -4,7 +4,7 @@ class_name test_helper___input extends GDPTScene
 
 ### GDPT Override ################################################
 static func scene_name()->String:
-	return "GDPT : Input"
+	return "helper_input"
 
 
 static func scene_path()->String:
