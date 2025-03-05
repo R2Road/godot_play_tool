@@ -12,7 +12,7 @@ static func scene_path()->String:
 
 
 ### Export #######################################################
-@export var helper_circle : GDPTHelper_Circle
+@export var test_helper : GDPTHelper_Circle
 
 @export var offset_x_slider : HSlider
 @export var offset_y_slider : HSlider
@@ -33,22 +33,22 @@ func _ready():
 	#
 	#
 	#
-	offset_x_slider.value = helper_circle.offset.x
-	offset_y_slider.value = helper_circle.offset.y
+	offset_x_slider.value = test_helper.offset.x
+	offset_y_slider.value = test_helper.offset.y
 	
-	radius_slider.value = helper_circle.radius
+	radius_slider.value = test_helper.radius
 	
-	fill_checkbox.button_pressed = helper_circle.fill
+	fill_checkbox.button_pressed = test_helper.fill
 	
-	color_picker.color = helper_circle.color
+	color_picker.color = test_helper.color
 	
 	#
-	offset_x_slider.value_changed.connect( func( value )->void: helper_circle.offset.x = value )
-	offset_y_slider.value_changed.connect( func( value )->void: helper_circle.offset.y = value )
+	offset_x_slider.value_changed.connect( func( value )->void: test_helper.offset.x = value )
+	offset_y_slider.value_changed.connect( func( value )->void: test_helper.offset.y = value )
 	
-	radius_slider.value_changed.connect( func( value )->void: helper_circle.radius = value )
+	radius_slider.value_changed.connect( func( value )->void: test_helper.radius = value )
 	
-	fill_checkbox.toggled.connect( func( value )->void: helper_circle.fill = value )
+	fill_checkbox.toggled.connect( func( value )->void: test_helper.fill = value )
 	
-	color_picker.color_changed.connect( func( value )->void: helper_circle.color = value )
+	color_picker.color_changed.connect( func( value )->void: test_helper.color = value )
 	

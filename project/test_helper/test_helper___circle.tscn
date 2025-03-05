@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://dd8e87gcfn7al" path="res://test_helper/test_helper___circle.gd" id="1_n8omk"]
 [ext_resource type="PackedScene" uid="uid://gpu5f7fm35o4" path="res://addons/godot_play_tool/helper/helper_circle.tscn" id="2_xu0ni"]
 
-[node name="test_helper___circle" type="Node2D" node_paths=PackedStringArray("helper_circle", "offset_x_slider", "offset_y_slider", "radius_slider", "fill_checkbox", "color_picker")]
+[node name="test_helper___circle" type="Node2D" node_paths=PackedStringArray("test_helper", "offset_x_slider", "offset_y_slider", "radius_slider", "fill_checkbox", "color_picker")]
 script = ExtResource("1_n8omk")
-helper_circle = NodePath("helper_circle")
+test_helper = NodePath("helper_circle")
 offset_x_slider = NodePath("CanvasLayer/GridContainer/Offset/OffsetX")
 offset_y_slider = NodePath("CanvasLayer/GridContainer/Offset/OffsetY")
 radius_slider = NodePath("CanvasLayer/GridContainer/Radius/Radius")
