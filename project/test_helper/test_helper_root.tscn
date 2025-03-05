@@ -10,31 +10,6 @@
 [node name="TestHelperRoot" type="Node2D"]
 script = ExtResource("1_8q1go")
 
-[node name="helper_rect_1" parent="." instance=ExtResource("4_q8sn8")]
-z_index = 4096
-position = Vector2(72, 392)
-color = Color(1, 0, 0, 1)
-
-[node name="helper_point" parent="helper_rect_1" instance=ExtResource("3_i5b61")]
-
-[node name="helper_rect_2" parent="." instance=ExtResource("4_q8sn8")]
-z_index = 4096
-position = Vector2(73, 460)
-color = Color(1, 0, 0, 1)
-out_line_bold = 3.0
-metadata/_edit_group_ = true
-
-[node name="helper_point" parent="helper_rect_2" instance=ExtResource("3_i5b61")]
-
-[node name="helper_rect_3" parent="." instance=ExtResource("4_q8sn8")]
-z_index = 4096
-position = Vector2(73, 528)
-color = Color(1, 0, 0, 1)
-fill = true
-metadata/_edit_group_ = true
-
-[node name="helper_point" parent="helper_rect_3" instance=ExtResource("3_i5b61")]
-
 [node name="helper_move2center_test" parent="." instance=ExtResource("3_i5b61")]
 position = Vector2(916, 98)
 metadata/_edit_group_ = true
