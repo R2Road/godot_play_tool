@@ -1,6 +1,6 @@
 class_name GDPTHelper_HSlider extends HSlider
 
-### Summary #####################################################
+### Summary ######################################################
 #
 # + 2024.09.18 by R
 #
@@ -10,16 +10,16 @@ class_name GDPTHelper_HSlider extends HSlider
 # editor의 scene tree에서 이 타입 노드를 선택하고 "편집할 수 있는 자식" 옵션을 활성화 하면 자식노드에 접근 가능하다.
 # 그 방법으로 Title Label의 text를 변경해라.
 #
-#################################################################
+##################################################################
 
 
 
-### Node : Override #############################################
+### Node : Override ##############################################
 func _ready()->void:
 	_on_value_changed( self.value )
 
 
 
-### Signal Function #############################################
+### Signal : Receiver ############################################
 func _on_value_changed( value : float )->void:
 	$Value.text = str( value )
