@@ -8,8 +8,6 @@ script = ExtResource("1_dpr03")
 test_helper = NodePath("CanvasLayer/helper_hslider")
 label = NodePath("CanvasLayer/Label")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="helper_hslider" parent="CanvasLayer" instance=ExtResource("2_dpr03")]

@@ -7,8 +7,6 @@
 [node name="test_helper___volume" type="Node2D"]
 script = ExtResource("1_4blvt")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HelperVolume" parent="CanvasLayer" instance=ExtResource("2_teylv")]
