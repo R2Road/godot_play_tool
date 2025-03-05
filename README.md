@@ -12,5 +12,5 @@
   - Windows 10
 
 - Engine
-  - Godot v4.2.2 Stable Official
+  - Godot v4.4 Stable Official
 
