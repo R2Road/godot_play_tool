@@ -1,4 +1,4 @@
-extends HSlider
+class_name GDPTHelper_HSlider extends HSlider
 
 ### Summary #####################################################
 #
