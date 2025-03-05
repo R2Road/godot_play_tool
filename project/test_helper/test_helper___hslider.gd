@@ -11,6 +11,12 @@ static func scene_path()->String:
 
 
 
+### Export #######################################################
+@export var test_helper : GDPTHelper_HSlider
+@export var label : Label
+
+
+
 ### Override #####################################################
 func _ready():
 	pam.set_name( scene_name() )
@@ -18,3 +24,11 @@ func _ready():
 	pam.add_back( Key.KEY_ESCAPE )
 	pam.add_split()
 	build_summary( eSceneType.TEST )
+	
+	#
+	#
+	#
+	label.text = str( test_helper.value )
+	
+	#
+	test_helper.value_changed.connect( func( value )->void: label.text = str( value ) )
