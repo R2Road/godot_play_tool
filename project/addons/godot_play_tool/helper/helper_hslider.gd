@@ -63,14 +63,8 @@ signal value_changed
 
 
 
-### Node : Override ##############################################
-func _ready()->void:
-	_on_h_slider_value_changed( hslider.value )
-	
-
-
 ### Interface ####################################################
-func set_name_label( _text : String )->void:
+func set_title_label( _text : String )->void:
 	title_label.text = _text
 
 
