@@ -17,7 +17,7 @@ title_label = NodePath("Title")
 title_text = "Text"
 max_value = 100.0
 step = 10.0
-value = 30.0
+value = 50.0
 metadata/_edit_group_ = true
 
 [node name="Title" type="Label" parent="."]
@@ -36,7 +36,7 @@ offset_left = -200.0
 offset_bottom = 23.0
 grow_horizontal = 0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
-text = "30.0"
+text = "50.0"
 horizontal_alignment = 2
 
 [node name="HSlider" type="HSlider" parent="."]
@@ -49,6 +49,6 @@ offset_top = -16.0
 grow_horizontal = 2
 grow_vertical = 0
 step = 10.0
-value = 30.0
+value = 50.0
 
 [connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]
