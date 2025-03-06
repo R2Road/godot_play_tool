@@ -51,6 +51,8 @@ class_name GDPTHelper_HSlider extends Control
 	set( _value ):
 		if hslider:
 			hslider.value = _value
+		if value_label:
+			value_label.text = str( _value )
 	get():
 		if hslider:
 			return hslider.value
