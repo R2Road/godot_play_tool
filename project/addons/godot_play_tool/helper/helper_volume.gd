@@ -36,15 +36,12 @@ var bus_index : int = 0
 ### Override #####################################################
 func _ready()->void:
 	bus_index = AudioServer.get_bus_index( bus_name )
-	slider.title_text = bus_name
-	set_volume( volume )
 
 
 
 ### Interface ####################################################
-func set_volume( _percentage : float ) -> void:
-	apply_volume( bus_index, _percentage )
-	slider.value = _percentage
+func set_volume_no_signal( _percentage : float ) -> void:
+	slider.set_value_no_signal( _percentage )
 
 
 static func apply_volume( _bus_index : int, _percentage : float ) -> void:

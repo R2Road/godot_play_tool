@@ -26,6 +26,7 @@ size_flags_vertical = 3
 
 [node name="HelperVolume_Master" parent="CanvasLayer/VBoxContainer" instance=ExtResource("2_teylv")]
 layout_mode = 2
+volume = 60.0
 
 [node name="HelperVolume_BGM" parent="CanvasLayer/VBoxContainer" instance=ExtResource("2_teylv")]
 layout_mode = 2
@@ -34,6 +35,7 @@ bus_name = "BGM"
 [node name="HelperVolume_SFX" parent="CanvasLayer/VBoxContainer" instance=ExtResource("2_teylv")]
 layout_mode = 2
 bus_name = "SFX"
+volume = 40.0
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 anchors_preset = 1

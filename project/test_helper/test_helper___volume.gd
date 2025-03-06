@@ -26,6 +26,11 @@ func _ready():
 	#
 	#
 	#
-	$CanvasLayer/VBoxContainer/HelperVolume_Master.set_volume( 30 )
-	$CanvasLayer/VBoxContainer/HelperVolume_BGM.set_volume( 30 )
-	$CanvasLayer/VBoxContainer/HelperVolume_SFX.set_volume( 30 )
+	GDPTHelper_Volume.apply_volume( 0, 20 )
+	$CanvasLayer/VBoxContainer/HelperVolume_Master.set_volume_no_signal( 20 )
+	
+	GDPTHelper_Volume.apply_volume( 1, 100 )
+	$CanvasLayer/VBoxContainer/HelperVolume_BGM.set_volume_no_signal( 100 )
+	
+	GDPTHelper_Volume.apply_volume( 1, 100 )
+	$CanvasLayer/VBoxContainer/HelperVolume_SFX.set_volume_no_signal( 100 )

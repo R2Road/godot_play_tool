@@ -32,6 +32,6 @@ func _ready():
 	#
 	#
 	#
-	GDPTHelper_Volume.apply_volume( 0, 30 )
-	GDPTHelper_Volume.apply_volume( 1, 30 )
-	GDPTHelper_Volume.apply_volume( 2, 30 )
+	GDPTHelper_Volume.apply_volume( 0, 70 )
+	GDPTHelper_Volume.apply_volume( 1, 100 )
+	GDPTHelper_Volume.apply_volume( 2, 100 )
