@@ -34,10 +34,6 @@ var bus_index : int = 0
 
 
 ### Override #####################################################
-func _init()->void:
-	self.set_z_index( RenderingServer.CANVAS_ITEM_Z_MAX )
-
-
 func _ready()->void:
 	bus_index = AudioServer.get_bus_index( bus_name )
 	slider.title_text = bus_name
