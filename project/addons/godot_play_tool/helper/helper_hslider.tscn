@@ -2,11 +2,12 @@
 
 [ext_resource type="Script" uid="uid://b3rfayd6sowlm" path="res://addons/godot_play_tool/helper/helper_hslider.gd" id="1_mul5h"]
 
-[node name="helper_hslider" type="HSlider"]
+[node name="helper_hslider" type="HSlider" node_paths=PackedStringArray("title_label")]
 offset_right = 200.0
 offset_bottom = 16.0
 value = 50.0
 script = ExtResource("1_mul5h")
+title_label = NodePath("Title")
 metadata/_edit_group_ = true
 
 [node name="Title" type="Label" parent="."]
@@ -24,7 +25,7 @@ offset_top = -20.0
 offset_right = 199.0
 offset_bottom = 3.0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
-text = "0"
+text = "50.0"
 horizontal_alignment = 2
 
 [connection signal="value_changed" from="." to="." method="_on_value_changed"]

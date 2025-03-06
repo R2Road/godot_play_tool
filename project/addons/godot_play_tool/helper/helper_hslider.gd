@@ -1,3 +1,4 @@
+@tool
 class_name GDPTHelper_HSlider extends HSlider
 
 ### Summary ######################################################
@@ -11,6 +12,16 @@ class_name GDPTHelper_HSlider extends HSlider
 # 그 방법으로 Title Label의 text를 변경해라.
 #
 ##################################################################
+
+
+
+### Export #######################################################
+@export var title_label : Label
+@export var title_text : String:
+	set( value ):
+		title_text = value
+		if title_label:
+			title_label.set_text( value )
 
 
 
