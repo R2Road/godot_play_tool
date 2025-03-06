@@ -16,9 +16,4 @@ slider = NodePath("helper_hslider")
 [node name="helper_hslider" parent="." instance=ExtResource("1_28syx")]
 layout_mode = 0
 
-[node name="Title" parent="helper_hslider" index="0"]
-text = "Volume"
-
 [connection signal="value_changed" from="helper_hslider" to="." method="_on_helper_hslider_value_changed"]
-
-[editable path="helper_hslider"]

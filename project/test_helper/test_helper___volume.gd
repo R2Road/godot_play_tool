@@ -23,4 +23,6 @@ func _ready():
 	#
 	#
 	#
-	$CanvasLayer/HelperVolume.set_volume( 30 )
+	$CanvasLayer/HelperVolume_Master.set_volume( 30 )
+	$CanvasLayer/HelperVolume_BGM.set_volume( 30 )
+	$CanvasLayer/HelperVolume_SFX.set_volume( 30 )
