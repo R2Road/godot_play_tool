@@ -28,6 +28,9 @@ func _ready():
 	#
 	#
 	#
+	test_helper.set_name_label( "test helper" )
+	
+	#
 	label.text = str( test_helper.value )
 	
 	#

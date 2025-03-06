@@ -20,6 +20,12 @@ func _ready()->void:
 
 
 
+### Interface ####################################################
+func set_name_label( _text : String )->void:
+	$Title.text = _text
+
+
+
 ### Signal : Receiver ############################################
 func _on_value_changed( value : float )->void:
 	$Value.text = str( value )
