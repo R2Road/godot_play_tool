@@ -29,9 +29,11 @@ func _ready():
 	#
 	#
 	test_helper.set_title_label( "test helper" )
+	test_helper.set_value_no_signal( 100 )
 	
 	#
 	label.text = str( test_helper.value )
 	
 	#
 	test_helper.value_changed.connect( func( value )->void: label.text = str( value ) )
+	

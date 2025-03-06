@@ -67,6 +67,9 @@ signal value_changed
 func set_title_label( _text : String )->void:
 	title_label.text = _text
 
+func set_value_no_signal( _value : float )->void:
+	hslider.set_value_no_signal( _value )
+	value_label.text = str( value )
 
 
 ### Signal : Receiver ############################################
