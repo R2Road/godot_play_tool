@@ -16,7 +16,7 @@ value_label = NodePath("Value")
 title_label = NodePath("Title")
 title_text = "Text"
 max_value = 100.0
-step = 10.0
+step = 1.0
 value = 50.0
 metadata/_edit_group_ = true
 
@@ -48,7 +48,6 @@ anchor_bottom = 1.0
 offset_top = -16.0
 grow_horizontal = 2
 grow_vertical = 0
-step = 10.0
 value = 50.0
 
 [connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]
