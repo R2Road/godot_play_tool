@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b3rfayd6sowlm" path="res://addons/godot_play_tool/helper/helper_hslider.gd" id="1_mul5h"]
 
-[node name="helper_hslider" type="Control" node_paths=PackedStringArray("hslider", "title_label")]
+[node name="helper_hslider" type="Control" node_paths=PackedStringArray("hslider", "value_label", "title_label")]
 custom_minimum_size = Vector2(0, 38)
 layout_mode = 3
 anchors_preset = 0
@@ -12,7 +12,9 @@ size_flags_horizontal = 3
 size_flags_vertical = 0
 script = ExtResource("1_mul5h")
 hslider = NodePath("HSlider")
+value_label = NodePath("Value")
 title_label = NodePath("Title")
+title_text = "Text"
 max_value = 100.0
 step = 10.0
 value = 30.0
@@ -23,7 +25,7 @@ layout_mode = 1
 offset_right = 34.0
 offset_bottom = 23.0
 size_flags_horizontal = 0
-text = "Title"
+text = "Text"
 
 [node name="Value" type="Label" parent="."]
 layout_mode = 1

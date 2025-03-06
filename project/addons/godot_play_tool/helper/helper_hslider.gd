@@ -17,6 +17,7 @@ class_name GDPTHelper_HSlider extends Control
 
 ### Export #######################################################
 @export var hslider : HSlider
+@export var value_label : Label
 @export var title_label : Label
 @export var title_text : String:
 	set( value ):
@@ -80,11 +81,11 @@ func _ready()->void:
 
 ### Interface ####################################################
 func set_name_label( _text : String )->void:
-	$Title.text = _text
+	title_label.text = _text
 
 
 
 ### Signal : Receiver ############################################
 func _on_h_slider_value_changed(value: float) -> void:
 	value_changed.emit( value )
-	$Value.text = str( value )
+	value_label.text = str( value )
