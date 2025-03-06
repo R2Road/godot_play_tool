@@ -1,5 +1,5 @@
 @tool
-class_name GDPTHelper_HSlider extends HSlider
+class_name GDPTHelper_HSlider extends Control
 
 ### Summary ######################################################
 #
@@ -16,6 +16,7 @@ class_name GDPTHelper_HSlider extends HSlider
 
 
 ### Export #######################################################
+@export var hslider : HSlider
 @export var title_label : Label
 @export var title_text : String:
 	set( value ):
@@ -23,12 +24,21 @@ class_name GDPTHelper_HSlider extends HSlider
 		if title_label:
 			title_label.set_text( value )
 
+var value : float:
+	get():
+		if hslider:
+			return hslider.value
+		else:
+			return 0
+
+signal value_changed
+
 
 
 ### Node : Override ##############################################
 func _ready()->void:
-	_on_value_changed( self.value )
-
+	_on_h_slider_value_changed( hslider.value )
+	
 
 
 ### Interface ####################################################
@@ -38,5 +48,6 @@ func set_name_label( _text : String )->void:
 
 
 ### Signal : Receiver ############################################
-func _on_value_changed( value : float )->void:
+func _on_h_slider_value_changed(value: float) -> void:
+	value_changed.emit( value )
 	$Value.text = str( value )
