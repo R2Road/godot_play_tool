@@ -25,15 +25,18 @@ grow_vertical = 2
 
 [node name="helper_hslider" parent="CanvasLayer/VBoxContainer" instance=ExtResource("2_dpr03")]
 layout_mode = 2
+title_text = "Title"
 step = 1.0
 
 [node name="helper_hslider2" parent="CanvasLayer/VBoxContainer" instance=ExtResource("2_dpr03")]
 layout_mode = 2
+title_text = "Title"
 min_value = 50.0
 value = 50.0
 
 [node name="helper_hslider3" parent="CanvasLayer/VBoxContainer" instance=ExtResource("2_dpr03")]
 layout_mode = 2
+title_text = "Title"
 min_value = 10.0
 max_value = 80.0
 step = 5.0
@@ -41,6 +44,7 @@ value = 10.0
 
 [node name="helper_hslider4" parent="CanvasLayer/VBoxContainer" instance=ExtResource("2_dpr03")]
 layout_mode = 2
+title_text = "Title"
 step = 1.0
 
 [node name="Label" type="Label" parent="CanvasLayer"]

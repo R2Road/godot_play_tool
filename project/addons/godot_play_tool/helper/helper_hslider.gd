@@ -20,9 +20,13 @@ class_name GDPTHelper_HSlider extends Control
 @export var title_label : Label
 @export var title_text : String:
 	set( value ):
-		title_text = value
 		if title_label:
 			title_label.set_text( value )
+	get():
+		if title_label:
+			return title_label.text
+		else:
+			return ""
 
 @export var min_value : float:
 	set( _value ):
