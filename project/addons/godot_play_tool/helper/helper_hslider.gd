@@ -24,7 +24,40 @@ class_name GDPTHelper_HSlider extends Control
 		if title_label:
 			title_label.set_text( value )
 
-var value : float:
+@export var min_value : float:
+	set( _value ):
+		if hslider:
+			hslider.min_value = _value
+	get():
+		if hslider:
+			return hslider.min_value
+		else:
+			return 0
+
+@export var max_value : float:
+	set( _value ):
+		if hslider:
+			hslider.max_value = _value
+	get():
+		if hslider:
+			return hslider.max_value
+		else:
+			return 0
+
+@export var step : float:
+	set( _value ):
+		if hslider:
+			hslider.step = _value
+	get():
+		if hslider:
+			return hslider.step
+		else:
+			return 0
+
+@export var value : float:
+	set( _value ):
+		if hslider:
+			hslider.value = _value
 	get():
 		if hslider:
 			return hslider.value
