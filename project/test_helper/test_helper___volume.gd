@@ -17,6 +17,9 @@ func _ready():
 	pam.set_name( scene_name() )
 	pam.add_split()
 	pam.add_back( Key.KEY_ESCAPE )
+	pam.add_lf2()
+	pam.add_action( "Do SFX", KEY_SPACE, func()->void: $AudioStreamPlayer2D_SFX.play() )
+	pam.add_lf()
 	pam.add_split()
 	build_summary( eSceneType.TEST )
 	
