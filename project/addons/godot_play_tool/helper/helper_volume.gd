@@ -47,17 +47,17 @@ func _ready()->void:
 
 ### Interface ####################################################
 func set_volume( _percentage : float ) -> void:
-	apply_volume( _percentage )
+	apply_volume( bus_index, _percentage )
 	slider.value = _percentage
 
 
-func apply_volume( _percentage : float ) -> void:
+static func apply_volume( _bus_index : int, _percentage : float ) -> void:
 	var scale : float = 20
 	var divisor : float = 50
 	
 	var new_volume : float = scale * ( log( _percentage / divisor ) / log( 10 ) )
 	
-	AudioServer.set_bus_volume_db( bus_index, new_volume )
+	AudioServer.set_bus_volume_db( _bus_index, new_volume )
 	
 	#print( "Volume : Percentage %f | DB : %f" % [_percentage, new_volume] )
 
@@ -65,5 +65,5 @@ func apply_volume( _percentage : float ) -> void:
 
 ### Signal : Receiver ############################################
 func _on_helper_hslider_value_changed( _percentage : float ) -> void:
-	apply_volume( _percentage )
+	apply_volume( bus_index, _percentage )
 	

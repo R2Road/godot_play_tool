@@ -28,3 +28,10 @@ func _ready():
 	pam.add_lf()
 	pam.add_split()
 	build_summary( eSceneType.ROOT )
+	
+	#
+	#
+	#
+	GDPTHelper_Volume.apply_volume( 0, 30 )
+	GDPTHelper_Volume.apply_volume( 1, 30 )
+	GDPTHelper_Volume.apply_volume( 2, 30 )
