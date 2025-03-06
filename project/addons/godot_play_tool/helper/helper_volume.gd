@@ -16,7 +16,7 @@ class_name GDPTHelper_Volume extends MarginContainer
 		else:
 			return ""
 
-@export var value : float:
+@export var volume : float:
 	set( _value ):
 		if slider:
 			slider.hslider.value = _value
@@ -41,6 +41,7 @@ func _init()->void:
 func _ready()->void:
 	bus_index = AudioServer.get_bus_index( bus_name )
 	slider.title_text = bus_name
+	set_volume( volume )
 
 
 

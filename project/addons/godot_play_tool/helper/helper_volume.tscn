@@ -11,7 +11,7 @@ size_flags_horizontal = 3
 script = ExtResource("1_027bk")
 slider = NodePath("helper_hslider")
 bus_name = "Master"
-value = 50.0
+volume = 50.0
 
 [node name="helper_hslider" parent="." instance=ExtResource("1_28syx")]
 layout_mode = 2
