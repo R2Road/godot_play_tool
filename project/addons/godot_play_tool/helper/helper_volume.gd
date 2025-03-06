@@ -1,10 +1,30 @@
-class_name GDPTHelper_Volume extends Control
+@tool
+class_name GDPTHelper_Volume extends MarginContainer
 
 
 
 ### Export #######################################################
-@export var bus_name : String = "Master"
 @export var slider : GDPTHelper_HSlider
+
+@export var bus_name : String:
+	set( value ):
+		if slider:
+			slider.title_label.set_text( value )
+	get():
+		if slider:
+			return slider.title_label.text
+		else:
+			return ""
+
+@export var value : float:
+	set( _value ):
+		if slider:
+			slider.hslider.value = _value
+	get():
+		if slider:
+			return slider.hslider.value
+		else:
+			return 0
 
 
 
@@ -20,7 +40,7 @@ func _init()->void:
 
 func _ready()->void:
 	bus_index = AudioServer.get_bus_index( bus_name )
-	$helper_hslider.set_name_label( bus_name )
+	slider.title_text = bus_name
 
 
 
