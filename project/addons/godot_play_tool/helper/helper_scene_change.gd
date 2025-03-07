@@ -31,6 +31,11 @@ func _init()->void:
 	# Global 에 추가해서 쓸 때 사용된다.
 	#
 	add_to_group( "autoload" )
+	
+	#
+	# Fade-in 처리에 필요.
+	#
+	self.set_z_index( RenderingServer.CANVAS_ITEM_Z_MAX )
 
 
 func _ready()->void:
@@ -54,7 +59,14 @@ func _physics_process(delta: float) -> void:
 		
 		eStep.CHANGE:
 			change_scene()
-			current_step = eStep.FADE_OUT_START
+			
+			#
+			# helper_scene_change의 Z 값을 변경해서 Fade-in 처리를 정상적으로 마무리 한다.
+			#
+			if get_tree().root == self.get_parent():
+				get_tree().root.move_child( self, get_tree().root.get_child_count() )
+			
+			current_step = eStep.FADE_IN_START
 		
 		eStep.FADE_IN_START:
 			var tween : Tween = self.create_tween()
