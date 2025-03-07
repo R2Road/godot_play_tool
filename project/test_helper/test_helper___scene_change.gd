@@ -31,4 +31,4 @@ func _ready():
 
 ### Interface ####################################################
 func do()->void:
-	scene_change.scene_change_with_path( test_helper___scene_change___exit_point.scene_path() )
+	scene_change.start( test_helper___scene_change___exit_point.scene_path() )

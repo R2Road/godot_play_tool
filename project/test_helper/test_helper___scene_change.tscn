@@ -5,6 +5,8 @@
 
 [node name="test_helper___scene_change" type="Node2D" node_paths=PackedStringArray("scene_change")]
 script = ExtResource("1_tt6ny")
-scene_change = NodePath("helper_scene_change")
+scene_change = NodePath("CanvasLayer/helper_scene_change")
 
-[node name="helper_scene_change" parent="." instance=ExtResource("2_xl5ak")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="helper_scene_change" parent="CanvasLayer" instance=ExtResource("2_xl5ak")]
