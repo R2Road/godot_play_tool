@@ -86,6 +86,8 @@ func _physics_process(delta: float) -> void:
 				queue_free()
 			
 			set_physics_process( false )
+			
+			current_step = eStep.NONE
 		
 
 
