@@ -48,4 +48,4 @@ func do_global_place__delete_when_finished()->void:
 	var scene : GDPTHelper_SceneChange = scene_change_packed_scene.instantiate()
 	get_tree().root.add_child( scene )
 	
-	scene.start( test_helper___scene_change___exit_point.scene_path(), 0.1, 2, true )
+	scene.start( test_helper___scene_change___exit_point.scene_path(), 1, 3, true )
