@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1vfnejaritcw"]
+
+[ext_resource type="Script" uid="uid://bsyern8abtxmn" path="res://test_helper/test_helper___scene_change.gd" id="1_tt6ny"]
+[ext_resource type="PackedScene" uid="uid://bxjj7junm8ker" path="res://addons/godot_play_tool/helper/helper_scene_change.tscn" id="2_xl5ak"]
+
+[node name="test_helper___scene_change" type="Node2D" node_paths=PackedStringArray("scene_change")]
+script = ExtResource("1_tt6ny")
+scene_change = NodePath("helper_scene_change")
+
+[node name="helper_scene_change" parent="." instance=ExtResource("2_xl5ak")]
