@@ -22,6 +22,8 @@ enum eStep
 	END,
 }
 var current_step : eStep = eStep.NONE
+var fade_out_seconds : float = 0.8
+var fade_in_seconds : float = 0.8
 
 
 
@@ -46,7 +48,7 @@ func _physics_process(delta: float) -> void:
 	match current_step:
 		eStep.FADE_OUT_START:
 			var tween : Tween = self.create_tween()
-			tween.tween_property( self, "color:a", 1, 0.8 )
+			tween.tween_property( self, "color:a", 1, fade_out_seconds )
 			tween.finished.connect( func()->void: current_step = eStep.LOAD )
 			
 			current_step = eStep.FADE_OUT_WAIT
@@ -71,7 +73,7 @@ func _physics_process(delta: float) -> void:
 		eStep.FADE_IN_START:
 			var tween : Tween = self.create_tween()
 			tween.tween_interval( 0.1 )
-			tween.tween_property( self, "color:a", 0, 0.8 )
+			tween.tween_property( self, "color:a", 0, fade_in_seconds )
 			tween.finished.connect( func()->void: current_step = eStep.END )
 			
 			current_step = eStep.FADE_IN_WAIT
@@ -85,8 +87,10 @@ func _physics_process(delta: float) -> void:
 
 
 ### Interface ####################################################
-func start( _scene_path : String )->void:
+func start( _scene_path : String, _fade_out_seconds : float = 0.8, _fade_in_seconds : float = 0.8 )->void:
 	scene_path = _scene_path
+	fade_out_seconds = _fade_out_seconds
+	fade_in_seconds = _fade_in_seconds
 	
 	current_step = eStep.FADE_OUT_START
 	set_physics_process( true )

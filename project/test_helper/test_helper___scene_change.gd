@@ -40,4 +40,4 @@ func do_global_place()->void:
 	var scene : GDPTHelper_SceneChange = scene_change_packed_scene.instantiate()
 	get_tree().root.add_child( scene )
 	
-	scene.start( test_helper___scene_change___exit_point.scene_path() )
+	scene.start( test_helper___scene_change___exit_point.scene_path(), 0.1, 2 )
