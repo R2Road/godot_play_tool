@@ -24,6 +24,7 @@ enum eStep
 var current_step : eStep = eStep.NONE
 var fade_out_seconds : float = 0.8
 var fade_in_seconds : float = 0.8
+var delete_when_finished : bool = false
 
 
 
@@ -81,16 +82,20 @@ func _physics_process(delta: float) -> void:
 			pass
 		
 		eStep.END:
+			if delete_when_finished:
+				queue_free()
+			
 			set_physics_process( false )
 		
 
 
 
 ### Interface ####################################################
-func start( _scene_path : String, _fade_out_seconds : float = 0.8, _fade_in_seconds : float = 0.8 )->void:
+func start( _scene_path : String, _fade_out_seconds : float = 0.8, _fade_in_seconds : float = 0.8, _delete_when_finished : bool = false )->void:
 	scene_path = _scene_path
 	fade_out_seconds = _fade_out_seconds
 	fade_in_seconds = _fade_in_seconds
+	delete_when_finished = _delete_when_finished
 	
 	current_step = eStep.FADE_OUT_START
 	set_physics_process( true )

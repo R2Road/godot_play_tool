@@ -25,6 +25,7 @@ func _ready():
 	pam.add_lf()
 	pam.add_action( "Do : Child Place", KEY_1, do_child_place )
 	pam.add_action( "Do : Global Place", KEY_2, do_global_place )
+	pam.add_action( "Do : Global Place : delete when finished", KEY_3, do_global_place__delete_when_finished )
 	pam.add_lf()
 	pam.add_split()
 	build_summary( eSceneType.TEST )
@@ -41,3 +42,10 @@ func do_global_place()->void:
 	get_tree().root.add_child( scene )
 	
 	scene.start( test_helper___scene_change___exit_point.scene_path(), 0.1, 2 )
+
+
+func do_global_place__delete_when_finished()->void:
+	var scene : GDPTHelper_SceneChange = scene_change_packed_scene.instantiate()
+	get_tree().root.add_child( scene )
+	
+	scene.start( test_helper___scene_change___exit_point.scene_path(), 0.1, 2, true )

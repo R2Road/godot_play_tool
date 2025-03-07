@@ -7,35 +7,50 @@
 [node name="test_helper___scene_change___exit_point" type="Node2D"]
 script = ExtResource("1_fxbo8")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -11.5
+offset_right = 0.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="helper_scene_change" parent="." instance=ExtResource("2_o5ab2")]
 
 [node name="helper_rect" parent="." instance=ExtResource("3_4oem8")]
 z_index = 4096
-position = Vector2(168, 31)
+position = Vector2(749, 40)
 rect = Rect2(0, 0, 100, 100)
 fill = true
 
 [node name="helper_rect2" parent="." instance=ExtResource("3_4oem8")]
 z_index = 4096
-position = Vector2(567, 87)
+position = Vector2(1004, 125)
 rect = Rect2(0, 0, 100, 100)
 fill = true
 
 [node name="helper_rect3" parent="." instance=ExtResource("3_4oem8")]
 z_index = 4096
-position = Vector2(394, 272)
+position = Vector2(248, 484)
 rect = Rect2(0, 0, 100, 100)
 fill = true
 
 [node name="helper_rect4" parent="." instance=ExtResource("3_4oem8")]
 z_index = 4096
-position = Vector2(875, 168)
+position = Vector2(896, 290)
 rect = Rect2(0, 0, 100, 100)
 fill = true
 
 [node name="helper_rect5" parent="." instance=ExtResource("3_4oem8")]
 z_index = 4096
-position = Vector2(712, 347)
+position = Vector2(609, 473)
 rect = Rect2(0, 0, 100, 100)
 fill = true
 
