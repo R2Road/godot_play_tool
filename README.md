@@ -3,7 +3,8 @@
 <br>
 
 ## 개괄 | Overview
-- 키보드 입력으로 Scene 전환, Action 수행을 도와주는 도구
+- 키보드 입력으로 Scene 전환 도구
+- 키보드 입력으로 Action 수행 도구
 - 점, 원, 사각형 등을 그려주는 도구
 - code 출력, log 출력, volume 조절 도구
 
