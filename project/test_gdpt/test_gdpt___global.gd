@@ -6,9 +6,13 @@ class_name test_gdpt___global extends GDPTScene
 static func scene_name()->String:
 	return "Global : Preloaded Helper Check"
 
-
 static func scene_path()->String:
 	return super.scene_path()
+
+
+
+### Export #######################################################
+@export var label : Label
 
 
 
@@ -37,16 +41,14 @@ func _ready():
 	var constant_map : Dictionary = GDPT.get_script().get_script_constant_map().duplicate()
 	var packed_scene_count : int = 0
 	
-	print( "[S] Load : Helper Scenes" )
-	
+	label.text += "[S] Load : Helper Scenes\n"
 	for constant_name : String in constant_map:
 		if -1 == constant_name.find( "packed_scene" ):
 			continue
 		
 		packed_scene_count += 1
-		print( "\t%2d : %s" % [packed_scene_count, constant_name] )
+		label.text += ( "     %2d : %s\n" % [packed_scene_count, constant_name] )
 		
 		var packed_scene = constant_map[constant_name]
 		root.add_child( packed_scene.instantiate() )
-	
-	print( "[E] Load : Helper Scenes" )
+	label.text += "[E] Load : Helper Scenes"
