@@ -45,4 +45,4 @@ func do()->void:
 	elif owner_parent is Node2D:
 		get_parent().position = owner_parent.to_local( target_world_position )
 	elif owner_parent is Control:
-		get_parent().position = ( target_world_position - owner_parent.get_global_transform() )
+		get_parent().position = ( target_world_position - owner_parent.get_global_transform().origin )
