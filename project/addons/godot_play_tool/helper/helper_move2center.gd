@@ -18,6 +18,13 @@ func _ready()->void:
 
 ### Interface ####################################################
 func do()->void:
+	#
+	# Move2Center 를 MainScene으로 구동한 경우 문제가 된다.
+	# Scene 기본 구성 : Root > MainScene > ...
+	#
+	if not get_parent().get_parent():
+		return
+	
 	var target_world_position : Vector2
 	
 	# 목표 world position 확보
