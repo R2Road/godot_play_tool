@@ -1,4 +1,4 @@
-extends Node2D
+class_name GDPTHelper_Move2Center extends Node2D
 
 
 
