@@ -24,6 +24,8 @@ func _ready():
 			update_label()
 	)
 	pam.add_action( "Debug Print", 			Key.KEY_SPACE, 	func(): GDPT._debug_print( func()->String: return "Test Message" ) )
+	pam.add_lf()
+	pam.add_note( "에디터의 output 창을 봐." )
 	build_summary( eSceneType.TEST )
 	
 	#
