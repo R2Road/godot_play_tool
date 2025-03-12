@@ -32,7 +32,6 @@ func _ready():
 	# Start Test
 	#
 	var root = Node2D.new()
-	root.position = Vector2( 100, 100 )
 	add_child( root )
 	
 	#
