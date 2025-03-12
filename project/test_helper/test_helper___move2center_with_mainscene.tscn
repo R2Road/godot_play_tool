@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://f1hdh4t76o6y"]
+
+[ext_resource type="Script" uid="uid://c7ehrk3cf5077" path="res://test_helper/test_helper___move2center_with_mainscene.gd" id="1_dqott"]
+[ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="3_44fux"]
+[ext_resource type="PackedScene" uid="uid://cngaojh6cbfw5" path="res://addons/godot_play_tool/helper/helper_rect.tscn" id="4_e6cg3"]
+[ext_resource type="PackedScene" uid="uid://gpu5f7fm35o4" path="res://addons/godot_play_tool/helper/helper_circle.tscn" id="4_n5c12"]
+
+[node name="test_helper___move2center_with_mainscene" type="Node2D"]
+script = ExtResource("1_dqott")
+
+[node name="zero_zero" parent="." instance=ExtResource("4_n5c12")]
+color = Color(1, 0, 0, 1)
+radius = 20.0
+fill = true
+
+[node name="helper_move2center" parent="." instance=ExtResource("3_44fux")]
+
+[node name="helper_rect" parent="helper_move2center" instance=ExtResource("4_e6cg3")]
+z_index = 4096
+rect = Rect2(-15, -15, 30, 30)
+fill = true

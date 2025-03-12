@@ -37,4 +37,12 @@ func do()->void:
 	if get_parent() is Control:
 		target_world_position -= ( get_parent().get_minimum_size() * get_parent().scale * 0.5 )
 	
-	get_parent().position = get_parent().get_parent().to_local( target_world_position )
+	var owner_parent = get_parent().get_parent()
+	
+	# MainScene 바로 아래에 붙인 경우.
+	if ( owner_parent is Window ):
+		get_parent().position = target_world_position
+	elif owner_parent is Node2D:
+		get_parent().position = owner_parent.to_local( target_world_position )
+	elif owner_parent is Control:
+		get_parent().position = ( target_world_position - owner_parent.get_global_transform() )
