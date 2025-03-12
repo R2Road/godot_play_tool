@@ -28,7 +28,7 @@ func _ready():
 
 ### Interface ####################################################
 func do()->void:
-	var temp : String
+	var temp : String = ""
 	
 	temp += "[START] root.get_children()\n"
 	for c in get_tree().root.get_children():
