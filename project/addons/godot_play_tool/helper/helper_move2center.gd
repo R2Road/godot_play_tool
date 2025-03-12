@@ -46,3 +46,5 @@ func do()->void:
 		get_parent().position = owner_parent.to_local( target_world_position )
 	elif owner_parent is Control:
 		get_parent().position = ( target_world_position - owner_parent.get_global_transform().origin )
+	else:
+		assert( false, "여기에 도달했으면 기능을 업데이트 하라." )
