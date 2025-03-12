@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://do3kcuxt2wjj2"]
+
+[ext_resource type="Script" uid="uid://pb4rykvkn56l" path="res://test_helper/test_helper___move2center_with_canvaslayer.gd" id="1_3gcy4"]
+[ext_resource type="PackedScene" uid="uid://bj2i1q1ilr6ld" path="res://addons/godot_play_tool/helper/helper_move2center.tscn" id="3_58dvy"]
+[ext_resource type="PackedScene" uid="uid://gpu5f7fm35o4" path="res://addons/godot_play_tool/helper/helper_circle.tscn" id="4_fwn2i"]
+
+[node name="test_helper___move2center_with_canvaslayer" type="Node2D"]
+script = ExtResource("1_3gcy4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Test"
+
+[node name="helper_move2center" parent="CanvasLayer/Label" instance=ExtResource("3_58dvy")]
+
+[node name="zero_zero" parent="." instance=ExtResource("4_fwn2i")]
+color = Color(1, 0, 0, 1)
+radius = 20.0
+fill = true

@@ -40,7 +40,7 @@ func do()->void:
 	var owner_parent = get_parent().get_parent()
 	
 	# MainScene 바로 아래에 붙인 경우.
-	if ( owner_parent is Window ):
+	if ( owner_parent is Window ) or ( owner_parent is CanvasLayer ):
 		get_parent().position = target_world_position
 	elif owner_parent is Node2D:
 		get_parent().position = owner_parent.to_local( target_world_position )
