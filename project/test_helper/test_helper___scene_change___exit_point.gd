@@ -25,6 +25,10 @@ func _ready():
 	build_summary( eSceneType.TEST )
 
 
+func _enter_tree() -> void:
+	print( "test_helper___scene_change___exit_point : _enter_tree" )
+
+
 
 ### Interface ####################################################
 func do()->void:
