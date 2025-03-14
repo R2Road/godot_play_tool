@@ -62,6 +62,7 @@ func _physics_process(delta: float) -> void:
 			current_step = eStep.CHANGE
 		
 		eStep.CHANGE:
+			remove_last_scene()
 			change_scene()
 			
 			#
@@ -112,7 +113,7 @@ func start( _scene_path : String, _fade_out_seconds : float = 0.8, _fade_in_seco
 	set_physics_process( true )
 
 
-func change_scene()->void:
+func remove_last_scene()->void:
 	#
 	# 현재 Scene의 Camera Off
 	#
@@ -128,6 +129,13 @@ func change_scene()->void:
 	for c in tree.root.get_children():
 		if not c.is_in_group( "autoload" ):
 			c.queue_free()
+
+
+func change_scene()->void:
+	#
+	# 현재 Scene의 모든 개체를 제거한다.
+	#
+	var tree = get_tree()
 	
 	#
 	# Scene 설정
