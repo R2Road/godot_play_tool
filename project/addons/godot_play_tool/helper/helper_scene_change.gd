@@ -125,23 +125,17 @@ func remove_last_scene()->void:
 	#
 	# 현재 Scene의 모든 개체를 제거한다.
 	#
-	var tree = get_tree()
-	for c in tree.root.get_children():
+	for c in get_tree().root.get_children():
 		if not c.is_in_group( "autoload" ):
 			c.queue_free()
 
 
 func change_scene()->void:
 	#
-	# 현재 Scene의 모든 개체를 제거한다.
-	#
-	var tree = get_tree()
-	
-	#
 	# Scene 설정
 	#
-	tree.root.add_child( next_scene )
+	get_tree().root.add_child( next_scene )
 	# current_scene 을 설정하지 않으면
 	# change_scene_to_file 을 이용한 Scene전환 이후
 	# 이전 Scene이 남아 있는 경우가 있다.
-	tree.set_current_scene( next_scene )
+	get_tree().set_current_scene( next_scene )
