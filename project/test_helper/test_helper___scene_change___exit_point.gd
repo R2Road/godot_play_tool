@@ -36,7 +36,7 @@ func do()->void:
 	
 	temp += "[START] root.get_children()\n"
 	for c in get_tree().root.get_children():
-		temp +=( "\t> %s\n" % c.name )
+		temp +=( "     > %s\n" % c.name )
 	temp += "[ END ] root.get_children()"
 	
 	$CanvasLayer/Label.text = temp
