@@ -103,7 +103,6 @@ func _physics_process(delta: float) -> void:
 			# 알파 값을 1로 바꿔서 Fade-in 처리시 z 값이 제대로 됐는지 확인 가능.
 			#
 			var tween : Tween = color_rect_node.create_tween()
-			tween.tween_interval( 0.1 )
 			tween.tween_property( color_rect_node, "color:a", 0, fade_in_seconds )
 			tween.finished.connect( func()->void: current_step = eStep.END )
 			
