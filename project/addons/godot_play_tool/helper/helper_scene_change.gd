@@ -71,6 +71,7 @@ func _physics_process(delta: float) -> void:
 		
 		eStep.LOAD:
 			next_scene = ResourceLoader.load( scene_path ).instantiate()
+			
 			current_step = eStep.REMOVE_LAST_SCENE
 		
 		eStep.REMOVE_LAST_SCENE:
@@ -96,6 +97,7 @@ func _physics_process(delta: float) -> void:
 		
 		eStep.CHANGE_SCENE:
 			change_scene()
+			
 			current_step = eStep.FADE_IN_START
 		
 		eStep.FADE_IN_START:
