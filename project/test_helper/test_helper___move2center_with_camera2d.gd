@@ -4,7 +4,7 @@ class_name test_helper___move2center_with_camera2d extends GDPTScene
 
 ### GDPT Override ################################################
 static func scene_name()->String:
-	return "helper_move2center : with Camera2D"
+	return "with Camera2D"
 
 
 static func scene_path()->String:

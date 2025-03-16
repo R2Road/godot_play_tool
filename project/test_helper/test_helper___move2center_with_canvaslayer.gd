@@ -4,7 +4,7 @@ class_name test_helper___move2center_with_canvaslayer extends GDPTScene
 
 ### GDPT Override ################################################
 static func scene_name()->String:
-	return "helper_move2center : with CanvasLayer"
+	return "with CanvasLayer Node"
 
 
 static func scene_path()->String:

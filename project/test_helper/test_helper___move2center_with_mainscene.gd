@@ -4,7 +4,7 @@ class_name test_helper___move2center_with_mainscene extends GDPTScene
 
 ### GDPT Override ################################################
 static func scene_name()->String:
-	return "helper_move2center : with MainScene"
+	return "with MainScene"
 
 
 static func scene_path()->String:

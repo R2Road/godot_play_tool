@@ -4,7 +4,7 @@ class_name test_helper___move2center_root extends GDPTScene
 
 ### GDPT Override ################################################
 static func scene_name()->String:
-	return "Move2Center : Root"
+	return "helper_move2center : Root"
 
 
 static func scene_path()->String:

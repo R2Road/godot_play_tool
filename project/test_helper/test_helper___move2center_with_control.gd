@@ -4,7 +4,7 @@ class_name test_helper___move2center_with_control extends GDPTScene
 
 ### GDPT Override ################################################
 static func scene_name()->String:
-	return "helper_move2center : with Control"
+	return "with Control Node"
 
 
 static func scene_path()->String:
