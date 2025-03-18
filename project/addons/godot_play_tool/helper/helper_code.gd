@@ -11,6 +11,8 @@ class_name GDPTHelper_Code extends BoxContainer
 ### Interface ####################################################
 func show_range( path : String, line_start : int, line_end : int )->void:
 	var file = FileAccess.open( path, FileAccess.READ )
+	if Error.OK != file.get_open_error():
+		code_edit.text = "[Failed] show_range : file open"
 	
 	# Move
 	for i in line_start - 1:
