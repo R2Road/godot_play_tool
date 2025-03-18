@@ -13,7 +13,8 @@ static func scene_path()->String:
 
 
 #### Export ######################################################
-@export var helper_code : GDPTHelper_Code
+@export var helper_code_1 : GDPTHelper_Code
+@export var helper_code_2 : GDPTHelper_Code
 
 
 
@@ -25,4 +26,11 @@ func _ready():
 	pam.add_split()
 	build_summary( eSceneType.TEST )
 	
-	helper_code.show_code_range( scene_path().replace( ".tscn", ".gd" ), 6, 7 )
+	helper_code_1.show_code_range( scene_path().replace( ".tscn", ".gd" ), 6, 7 )
+	helper_code_2.show_code_range( scene_path().replace( ".tscn", ".gd" ), 34, 40 )
+
+
+### Interface ####################################################
+func test()->void:
+	pass
+	# 출력 요청 라인이 실제 파일을 넘어가면 어떻게 되는지 확인 용도.

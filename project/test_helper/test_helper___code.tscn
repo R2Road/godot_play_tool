@@ -3,18 +3,31 @@
 [ext_resource type="Script" uid="uid://ds1gbkylln5fj" path="res://test_helper/test_helper___code.gd" id="1_p2xjl"]
 [ext_resource type="PackedScene" uid="uid://cpuuwp2254hm2" path="res://addons/godot_play_tool/helper/helper_code.tscn" id="2_weisi"]
 
-[node name="test_helper___code" type="Node2D" node_paths=PackedStringArray("helper_code")]
+[node name="test_helper___code" type="Node2D" node_paths=PackedStringArray("helper_code_1", "helper_code_2")]
 script = ExtResource("1_p2xjl")
-helper_code = NodePath("CanvasLayer/helper_code")
+helper_code_1 = NodePath("CanvasLayer/helper_code_1")
+helper_code_2 = NodePath("CanvasLayer/helper_code_2")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="helper_code" parent="CanvasLayer" instance=ExtResource("2_weisi")]
+[node name="helper_code_1" parent="CanvasLayer" instance=ExtResource("2_weisi")]
 anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -494.0
+offset_right = 0.0
+offset_bottom = -348.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="helper_code_2" parent="CanvasLayer" instance=ExtResource("2_weisi")]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -494.0
+offset_top = 354.0
 offset_right = 0.0
 offset_bottom = 0.0
 grow_horizontal = 0
