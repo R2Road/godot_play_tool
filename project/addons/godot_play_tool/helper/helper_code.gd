@@ -20,6 +20,10 @@ func show_code_range( path : String, line_start : int, line_end : int )->void:
 	var code : String
 	for i in range( line_start, line_end + 1 ):
 		code += file.get_line()
+		
+		if file.eof_reached():
+			break
+		
 		if i != line_end:
 			code += "\n"
 	
