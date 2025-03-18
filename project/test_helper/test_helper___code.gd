@@ -26,8 +26,8 @@ func _ready():
 	pam.add_split()
 	build_summary( eSceneType.TEST )
 	
-	helper_code_1.show_code_range( scene_path().replace( ".tscn", ".gd" ), 6, 7 )
-	helper_code_2.show_code_range( scene_path().replace( ".tscn", ".gd" ), 34, 40 )
+	helper_code_1.show_range( scene_path().replace( ".tscn", ".gd" ), 6, 7 )
+	helper_code_2.show_range( scene_path().replace( ".tscn", ".gd" ), 34, 40 )
 
 
 ### Interface ####################################################
