@@ -15,6 +15,7 @@ static func scene_path()->String:
 #### Export ######################################################
 @export var helper_code_1 : GDPTHelper_Code
 @export var helper_code_2 : GDPTHelper_Code
+@export var helper_code_3 : GDPTHelper_Code
 
 
 
@@ -28,6 +29,7 @@ func _ready():
 	
 	helper_code_1.show_range( scene_path().replace( ".tscn", ".gd" ), 6, 7 )
 	helper_code_2.show_range( scene_path().replace( ".tscn", ".gd" ), 34, 40 )
+	helper_code_3.show_all( scene_path().replace( ".tscn", ".gd" ) )
 
 
 ### Interface ####################################################
