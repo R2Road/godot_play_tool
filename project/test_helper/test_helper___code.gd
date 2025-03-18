@@ -25,4 +25,4 @@ func _ready():
 	pam.add_split()
 	build_summary( eSceneType.TEST )
 	
-	helper_code.show_code( scene_path().replace( ".tscn", ".gd" ), 6, 7 )
+	helper_code.show_code_range( scene_path().replace( ".tscn", ".gd" ), 6, 7 )

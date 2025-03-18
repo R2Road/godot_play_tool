@@ -9,7 +9,7 @@ class_name GDPTHelper_Code extends BoxContainer
 
 
 ### Interface ####################################################
-func show_code( path : String, line_start : int, line_end : int )->void:
+func show_code_range( path : String, line_start : int, line_end : int )->void:
 	var file = FileAccess.open( path, FileAccess.READ )
 	
 	# Move
