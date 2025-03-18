@@ -19,7 +19,7 @@ class_name GDPTHelper_SceneChange extends CanvasLayer
 
 ### Variable #####################################################
 var scene_path : String
-var next_scene
+var next_scene : Node
 var auto_load_count : int = 0
 
 enum eStep
@@ -126,9 +126,7 @@ func _physics_process(delta: float) -> void:
 ### Interface ####################################################
 func start( _scene_path : String, _fade_out_seconds : float = 0.8, _fade_in_seconds : float = 0.8, _delete_when_finished : bool = false )->void:
 	scene_path = _scene_path
-	fade_out_seconds = _fade_out_seconds
-	fade_in_seconds = _fade_in_seconds
-	delete_when_finished = _delete_when_finished
+	next_scene = null
 	
 	auto_load_count = 0
 	for c in get_tree().root.get_children():
@@ -136,6 +134,10 @@ func start( _scene_path : String, _fade_out_seconds : float = 0.8, _fade_in_seco
 			auto_load_count += 1
 	
 	current_step = eStep.FADE_OUT_START
+	fade_out_seconds = _fade_out_seconds
+	fade_in_seconds = _fade_in_seconds
+	delete_when_finished = _delete_when_finished
+	
 	set_physics_process( true )
 
 
