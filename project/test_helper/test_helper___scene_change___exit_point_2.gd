@@ -1,10 +1,10 @@
-class_name test_helper___scene_change___exit_point extends GDPTScene
+class_name test_helper___scene_change___exit_point_2 extends GDPTScene
 
 
 
 ### GDPT Override ################################################
 static func scene_name()->String:
-	return "helper_scene_change : exit point"
+	return "helper_scene_change : exit point 2"
 
 static func scene_path()->String:
 	return super.scene_path()
@@ -26,7 +26,7 @@ func _ready():
 
 
 func _enter_tree() -> void:
-	print( "test_helper___scene_change___exit_point : _enter_tree" )
+	print( "test_helper___scene_change___exit_point_2 : _enter_tree" )
 
 
 

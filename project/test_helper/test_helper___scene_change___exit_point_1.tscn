@@ -1,0 +1,62 @@
+[gd_scene load_steps=4 format=3 uid="uid://5h6pcb58a7p0"]
+
+[ext_resource type="Script" uid="uid://dnxllnavw8lpj" path="res://test_helper/test_helper___scene_change___exit_point_1.gd" id="1_lfnvx"]
+[ext_resource type="PackedScene" uid="uid://bxjj7junm8ker" path="res://addons/godot_play_tool/helper/helper_scene_change.tscn" id="2_r5wrh"]
+[ext_resource type="PackedScene" uid="uid://cngaojh6cbfw5" path="res://addons/godot_play_tool/helper/helper_rect.tscn" id="3_ymrij"]
+
+[node name="test_helper___scene_change___exit_point_1" type="Node2D"]
+script = ExtResource("1_lfnvx")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -11.5
+offset_right = 0.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+
+[node name="helper_scene_change" parent="." instance=ExtResource("2_r5wrh")]
+
+[node name="helper_rect" parent="." instance=ExtResource("3_ymrij")]
+z_index = 4096
+position = Vector2(749, 40)
+rect = Rect2(0, 0, 100, 100)
+fill = true
+
+[node name="helper_rect2" parent="." instance=ExtResource("3_ymrij")]
+z_index = 4096
+position = Vector2(1004, 125)
+rect = Rect2(0, 0, 100, 100)
+fill = true
+
+[node name="helper_rect3" parent="." instance=ExtResource("3_ymrij")]
+z_index = 4096
+position = Vector2(248, 484)
+rect = Rect2(0, 0, 100, 100)
+fill = true
+
+[node name="helper_rect4" parent="." instance=ExtResource("3_ymrij")]
+z_index = 4096
+position = Vector2(896, 290)
+rect = Rect2(0, 0, 100, 100)
+fill = true
+
+[node name="helper_rect5" parent="." instance=ExtResource("3_ymrij")]
+z_index = 4096
+position = Vector2(609, 473)
+rect = Rect2(0, 0, 100, 100)
+fill = true
+
+[node name="helper_rect6" parent="." instance=ExtResource("3_ymrij")]
+z_index = 4096
+position = Vector2(929, 510)
+rect = Rect2(0, 0, 100, 100)
+fill = true

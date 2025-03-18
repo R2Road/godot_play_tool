@@ -5,8 +5,13 @@ class_name GDPTHelper_SceneChange extends CanvasLayer
 ### Summary #####################################################
 #
 # global 객체로 추가해서 사용하는 것이 아닌 경우.
+#
 # > 이전 scene의 _exit_tree 가 현재 scene의 _enter_tree보다 늦게 불린다.
 # > 해당 함수를 사용 한다면 주의 할 것.
+#
+# > helper_scene_change 의 작동이 겹치면 fade-in 처리가 완료되지 않는다.
+# > scene 전환 과정에서 후 순위 node가 REMOVE_LAST_SCENE_WAIT 상태에서 빠져나오지 못하기 때문이다.
+# > 가급적 global로 사용할 것.
 #
 #################################################################
 
