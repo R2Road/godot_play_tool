@@ -1,55 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://camhcd84wj8j8"]
 
+[ext_resource type="Script" uid="uid://co07vvngppwr1" path="res://test_helper/test_helper___scene_change___exit_point_2.gd" id="1_enfco"]
 [ext_resource type="PackedScene" uid="uid://bxjj7junm8ker" path="res://addons/godot_play_tool/helper/helper_scene_change.tscn" id="2_gora2"]
 [ext_resource type="PackedScene" uid="uid://cngaojh6cbfw5" path="res://addons/godot_play_tool/helper/helper_rect.tscn" id="3_axvg5"]
 
-[sub_resource type="GDScript" id="GDScript_hoyd5"]
-script/source = "class_name test_helper___scene_change___exit_point extends GDPTScene
-
-
-
-### GDPT Override ################################################
-static func scene_name()->String:
-	return \"helper_scene_change : exit point\"
-
-static func scene_path()->String:
-	return super.scene_path()
-
-
-
-### Override #####################################################
-func _ready():
-	pam.set_name( scene_name() )
-	pam.add_split()
-	pam.add_lf()
-	pam.add_mover( test_helper_root.scene_name(), KEY_ESCAPE, test_helper_root.scene_path() )
-	pam.add_lf()
-	pam.add_action( \"helper_scene_change의 자가 삭제 기능 확인 : Show Root Children\", KEY_1, do )
-	pam.add_message( \"Fade-in 종료 후 do를 수행해야 결과 확인 가능.\" )
-	pam.add_lf()
-	pam.add_split()
-	build_summary( eSceneType.TEST )
-
-
-func _enter_tree() -> void:
-	print( \"test_helper___scene_change___exit_point : _enter_tree\" )
-
-
-
-### Interface ####################################################
-func do()->void:
-	var temp : String = \"\"
-	
-	temp += \"[START] root.get_children()\\n\"
-	for c in get_tree().root.get_children():
-		temp +=( \"     > %s\\n\" % c.name )
-	temp += \"[ END ] root.get_children()\"
-	
-	$CanvasLayer/Label.text = temp
-"
-
 [node name="test_helper___scene_change___exit_point_2" type="Node2D"]
-script = SubResource("GDScript_hoyd5")
+script = ExtResource("1_enfco")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
