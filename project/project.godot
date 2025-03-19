@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+SC="*res://addons/godot_play_tool/helper/helper_scene_change.tscn"
 GDPT="*res://addons/godot_play_tool/gdpt_global.gd"
 
 [display]
