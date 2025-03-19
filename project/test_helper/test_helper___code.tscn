@@ -42,3 +42,30 @@ offset_top = -137.5
 offset_right = 494.0
 offset_bottom = 137.5
 grow_vertical = 2
+
+[node name="show_range" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+offset_left = 562.0
+offset_top = 3.0
+offset_right = 1056.0
+offset_bottom = 26.0
+size_flags_horizontal = 4
+text = "show_range"
+
+[node name="show_range+" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+offset_left = 562.0
+offset_top = 329.0
+offset_right = 1056.0
+offset_bottom = 352.0
+size_flags_horizontal = 4
+text = "show_range : 지정 범위가 파일 라인을 넘을때"
+
+[node name="show_all" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+offset_left = 6.0
+offset_top = 164.0
+offset_right = 500.0
+offset_bottom = 187.0
+size_flags_horizontal = 4
+text = "show_all"
