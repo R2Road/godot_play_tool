@@ -5,9 +5,18 @@
 
 [node name="test_helper___output" type="Node2D" node_paths=PackedStringArray("helper_output")]
 script = ExtResource("1_kamgl")
-helper_output = NodePath("helper_output")
+helper_output = NodePath("CanvasLayer/helper_output")
 
-[node name="helper_output" parent="." instance=ExtResource("2_o0cdr")]
-offset_left = 803.0
-offset_right = 1152.0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="helper_output" parent="CanvasLayer" instance=ExtResource("2_o0cdr")]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -419.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 2
 allowed_line_count = 50
