@@ -24,5 +24,7 @@
 <img src="https://github.com/R2Road/godot_play_tool/blob/main/wiki/helper_root_01.png"></img>
 <img src="https://github.com/R2Road/godot_play_tool/blob/main/wiki/helper_circle_01.png"></img>
 <img src="https://github.com/R2Road/godot_play_tool/blob/main/wiki/helper_volume_01.png"></img>
+<img src="https://github.com/R2Road/godot_play_tool/blob/main/wiki/helper_code_01.png"></img>
+<img src="https://github.com/R2Road/godot_play_tool/blob/main/wiki/helper_output_01.png"></img>
 </p>
 
