@@ -4,7 +4,13 @@ class_name GDPTHelper_SceneChange extends CanvasLayer
 
 ### Summary #####################################################
 #
-# global 객체로 추가해서 사용하는 것이 아닌 경우.
+# + global 객체로 추가 할 경우 GDPT 보다 위에 추가되어야 한다.
+#
+# > 그렇지 않을 경우 실행시 정상 로딩 되지 않는다.
+#
+#
+#
+# + global 객체로 추가해서 사용하는 것이 아닌 경우.
 #
 # > 이전 scene의 _exit_tree 가 현재 scene의 _enter_tree보다 늦게 불린다.
 # > 해당 함수를 사용 한다면 주의 할 것.
