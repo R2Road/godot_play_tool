@@ -26,6 +26,7 @@ func _ready():
 	pam.add_action( "Do : Child Place", KEY_1, do_child_place )
 	pam.add_action( "Do : Global Place", KEY_2, do_global_place )
 	pam.add_action( "Do : Global Place : delete when finished", KEY_3, do_global_place__delete_when_finished )
+	pam.add_action( "Do : Global", KEY_4, do_global )
 	pam.add_lf()
 	pam.add_action( "Do : Global Place : 두개의 helper_scene_change가 동시에 작동하는 경우", KEY_Q, do_global_place__over_lap )
 	pam.add_message( "   > helper_scene_change 의 작동이 겹치면 fade-in 처리가 완료되지 않는다." )
@@ -68,3 +69,7 @@ func do_global_place__over_lap()->void:
 	var scene_2 : GDPTHelper_SceneChange = scene_change_packed_scene.instantiate()
 	get_tree().root.add_child( scene_2 )
 	scene_2.start( test_helper___scene_change___exit_point_2.scene_path(), 1, 3, true )
+
+
+func do_global()->void:
+	SC.start( test_helper___scene_change___exit_point_1.scene_path(), 1, 3 )

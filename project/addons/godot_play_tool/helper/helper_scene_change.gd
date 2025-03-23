@@ -31,6 +31,7 @@ enum eStep
 {
 	NONE,
 	
+	READY,
 	FADE_OUT_START,
 	FADE_OUT_WAIT,
 	
@@ -65,6 +66,12 @@ func _ready()->void:
 
 func _physics_process(delta: float) -> void:
 	match current_step:
+		eStep.READY:
+			if get_tree().root == self.get_parent():
+				get_tree().root.move_child( self, get_tree().root.get_child_count() )
+			
+			current_step = eStep.FADE_OUT_START
+
 		eStep.FADE_OUT_START:
 			var tween : Tween = color_rect_node.create_tween()
 			tween.tween_property( color_rect_node, "color:a", 1, fade_out_seconds )
@@ -138,7 +145,7 @@ func start( _scene_path : String, _fade_out_seconds : float = 0.8, _fade_in_seco
 		if c.is_in_group( "autoload" ):
 			auto_load_count += 1
 	
-	current_step = eStep.FADE_OUT_START
+	current_step = eStep.READY
 	fade_out_seconds = _fade_out_seconds
 	fade_in_seconds = _fade_in_seconds
 	delete_when_finished = _delete_when_finished
