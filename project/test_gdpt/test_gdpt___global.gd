@@ -32,6 +32,22 @@ func _ready():
 	# Start Test
 	#
 	check_helper_packed_scene()
+	
+	label.text += "\n"
+	
+	# helper_scene_change의 read-only 속성 확인.
+	label.text += "[S] GDPT.helper_scene_change_packed_scene\n"
+	if null != GDPT.helper_scene_change_packed_scene:
+		label.text += "     [O] is not null\n"
+	else:
+		label.text += "     [E]\n"
+	
+	GDPT.helper_scene_change_packed_scene = null
+	if null != GDPT.helper_scene_change_packed_scene:
+		label.text += "     [O] Assign not working\n"
+	else:
+		label.text += "     [E]\n"
+	label.text += "[E] GDPT.helper_scene_change_packed_scene\n"
 
 
 
@@ -59,10 +75,10 @@ func check_helper_packed_scene()->void:
 		
 		var packed_scene = constant_map[constant_name]
 		root.add_child( packed_scene.instantiate() )
-	label.text += "[E] Load : Helper Scenes : Const"
+	label.text += "[E] Load : Helper Scenes : Const\n"
 	
 	
-	label.text += "\n\n"
+	label.text += "\n"
 	
 	
 	# Normal
@@ -78,4 +94,4 @@ func check_helper_packed_scene()->void:
 		
 		var packed_scene = GDPT.get( property["name"] )
 		root.add_child( packed_scene.instantiate() )
-	label.text += "[E] Load : Helper Scenes : Normal"
+	label.text += "[E] Load : Helper Scenes : Normal\n"
