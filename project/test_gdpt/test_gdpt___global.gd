@@ -31,6 +31,12 @@ func _ready():
 	#
 	# Start Test
 	#
+	check_helper_packed_scene()
+
+
+
+### Interface ####################################################
+func check_helper_packed_scene()->void:
 	var root = Node2D.new()
 	add_child( root )
 	
@@ -72,5 +78,4 @@ func _ready():
 		
 		var packed_scene = GDPT.get( property["name"] )
 		root.add_child( packed_scene.instantiate() )
-	
 	label.text += "[E] Load : Helper Scenes : Normal"
