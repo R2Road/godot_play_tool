@@ -37,10 +37,13 @@ func _ready():
 	#
 	# Load Packed Scene
 	#
-	var constant_map : Dictionary = GDPT.get_script().get_script_constant_map().duplicate()
+	
 	var packed_scene_count : int = 0
 	
-	label.text += "[S] Load : Helper Scenes\n"
+	# Const
+	var constant_map : Dictionary = GDPT.get_script().get_script_constant_map()
+	
+	label.text += "[S] Load : Helper Scenes : Const\n"
 	for constant_name : String in constant_map:
 		if -1 == constant_name.find( "packed_scene" ):
 			continue
@@ -50,4 +53,24 @@ func _ready():
 		
 		var packed_scene = constant_map[constant_name]
 		root.add_child( packed_scene.instantiate() )
-	label.text += "[E] Load : Helper Scenes"
+	label.text += "[E] Load : Helper Scenes : Const"
+	
+	
+	label.text += "\n\n"
+	
+	
+	# Normal
+	var property_list : Array = GDPT.get_script().get_script_property_list()
+	
+	label.text += "[S] Load : Helper Scenes : Normal\n"
+	for property : Dictionary in property_list:
+		if -1 == property["name"].find( "packed_scene" ):
+			continue
+		
+		packed_scene_count += 1
+		label.text += ( "     %2d : %s\n" % [packed_scene_count, property["name"]] )
+		
+		var packed_scene = GDPT.get( property["name"] )
+		root.add_child( packed_scene.instantiate() )
+	
+	label.text += "[E] Load : Helper Scenes : Normal"
